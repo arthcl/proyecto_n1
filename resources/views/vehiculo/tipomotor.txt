@@ -1,0 +1,4 @@
+1	diesel	NULL
+2	bencinero	NULL
+3	hibrido	NULL
+4	electrico	NULL

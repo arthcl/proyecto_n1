@@ -1,0 +1,25 @@
+edan
+city car
+sub
+jeep
+camioneta
+deportivo
+furgon	
+micro-bus
+bus	
+amion 3/4	
+camion tolva
+camion aljibe	
+camion plano	
+camion tracto	
+cargador frontal
+retroexcavadora	
+excavadora	
+excavadora-neumaticos	
+motoniveladora
+rodillo	
+tractor	
+bulldozer
+minicargador
+miniexcavadora	
+grupo electrogeno-generador

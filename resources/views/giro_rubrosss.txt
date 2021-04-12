@@ -1,0 +1,54 @@
+1	construccion	NULL
+2	distribucion agua purificada	NULL
+3	almacen	NULL
+4	transporte	NULL
+5	distribucion de gas	NULL
+6	distribucion de alimentos	NULL
+7	mineria	NULL
+8	arriendo maquinaria	NULL
+9	aridos	NULL
+10	laboratorio de muestras	NULL
+11	arriendo de vehiculos	NULL
+
+
+
+
+ <!--///////////////////////////////////// -->
+
+
+  <!-- Carta de vehiculos ingresados 
+  <div class="card col-6">
+    <div class="card-header">
+      <h4 class="">
+        <span class="text-muted">Sus vehiculos</span>
+      
+      </h4>
+    </div>
+  <div class="card-body">
+          @forelse($vehiculos as $v)
+        <div class="table-responsive table-borderless border">
+        <a href="{{ route('vehiculo.show',$v) }}"><div class="card-header bg-warning">{{ $v->patente }} - {{ $v->modelo }}</div></a>
+        <table class="table col-12">
+
+        <tbody class="text-left">
+          
+          <tr>
+            <td class="py-0"><h7 class="font-weight-bold">Prox. Mantención:</h7> Esta se ingresara manualmente </td>
+          </tr>
+          <tr>
+           <td class="py-0"><h7 class="font-weight-bold">Indicador KM/hr:</h7> Esta se ingresara manualmente </td>
+          </tr>
+          <tr >
+            <td class="py-0"><h7 class="font-weight-bold mb-0">Revisión Tec : </h7> {{ date('d-m-Y', strtotime($v->revision_tecnica)) }}</td>
+          </tr>
+        </tbody>
+        </table>
+    </div>       
+          @empty
+               <small>el usuario {{ $usuario->name }}, no tiene vehiculos registrados</small>
+          @endforelse
+      <ul>    
+        {{ $vehiculos->links() }}
+      </ul>
+      -->
+           

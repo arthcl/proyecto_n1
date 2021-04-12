@@ -1,0 +1,27 @@
+1	trapos (uni)	NULL	NULL	NULL	NULL	NULL
+2	solventes limpieza (uni)	NULL	NULL	NULL	NULL	NULL
+3	graseras (uni)	NULL	NULL	NULL	NULL	NULL
+4	limpiacontactos (uni)	NULL	NULL	NULL	NULL	NULL
+5	solvente lubricante (uni)	NULL	NULL	NULL	NULL	NULL
+6	pegamentos (uni)	NULL	NULL	NULL	NULL	NULL
+7	cinta asilante (uni)	NULL	NULL	NULL	NULL	NULL
+8	cubremangueras (uni)	NULL	NULL	NULL	NULL	NULL
+9	gomas (uni)	NULL	NULL	NULL	NULL	NULL
+10	silicona tapiz (uni)	NULL	NULL	NULL	NULL	NULL
+11	teflon (uni)	NULL	NULL	NULL	NULL	NULL
+12	conector electrico hembra (uni)	NULL	NULL	NULL	NULL	NULL
+13	conector electrico macho (uni)	NULL	NULL	NULL	NULL	NULL
+14	botoneras (uni)	NULL	NULL	NULL	NULL	NULL
+15	luces (uni)	NULL	NULL	NULL	NULL	NULL
+16	pernos (uni)	NULL	NULL	NULL	NULL	NULL
+17	tuercas (uni)	NULL	NULL	NULL	NULL	NULL
+18	golillas (uni)	NULL	NULL	NULL	NULL	NULL
+19	remaches (uni)	NULL	NULL	NULL	NULL	NULL
+20	cable (mts)	NULL	NULL	NULL	NULL	NULL
+21	bornes (uni)	NULL	NULL	NULL	NULL	NULL
+22	hojas de cierra (uni)	NULL	NULL	NULL	NULL	NULL
+23	funda termica (mts)	NULL	NULL	NULL	NULL	NULL
+24	broca (uni)	NULL	NULL	NULL	NULL	NULL
+25	lija (uni)	NULL	NULL	NULL	NULL	NULL
+26	acople rapido aire (uni)	NULL	NULL	NULL	NULL	NULL
+27	abrazadera(uni)	NULL	NULL	NULL	NULL	NULL

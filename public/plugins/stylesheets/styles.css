@@ -1,0 +1,28 @@
+
+@font-face {
+    font-family: 'Gotham XLight';
+    src: url('Gotham-XLight.eot?#iefix') format('embedded-opentype'), url('Gotham-XLight.otf') format('opentype'), url('Gotham-XLight.woff') format('woff'), url('Gotham-XLight.ttf') format('truetype'), url('Gotham-XLight.svg#Gotham-XLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.placeholder {
+    color: #aaa;
+    font-family: 'Gotham XLight' !important;
+}
+
+.form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+    font-family: 'Gotham XLight' !important;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #999;
+    font-family: 'Gotham XLight' !important;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #999;
+    font-family: 'Gotham XLight' !important;
+}
