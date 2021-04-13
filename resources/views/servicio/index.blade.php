@@ -43,7 +43,7 @@
    @forelse($servicio_pendiente as $pendiente)
     <tr>
      <th scope="row">{{ $pendiente->id }}</th>
-     <td>{{ $pendiente->user->nombre }}</td>
+     <td>{{ $pendiente->user->nombre}}</td>
      <td>{{ $pendiente->vehiculo->patente}}</td>
      <td>{{ $pendiente->tipo_servicio->descripcion }}</td>
      <td>{{ $pendiente->taller->descripcion }}</td>
@@ -130,7 +130,7 @@
      <td>{{ $finalizado->tipo_servicio->descripcion }}</td>
      <td>{{ $finalizado->taller->descripcion }}</td>
      <td>
-      <a class="btn btn-info btn-sm d-flex" href="{{ route('servicio.show', $finalizado) }}" title="">
+      <a class="btn btn-secondary btn-sm d-flex" href="{{ route('servicio.show', $finalizado) }}" title="">
        <i class="fa fa-eye px-2 my-auto" aria-hidden="true"></i>
        Ver
       </a>

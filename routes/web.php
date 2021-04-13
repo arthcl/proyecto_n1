@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,65 +23,41 @@ Route::post('/contacto', 'MessageController@store')->name('messages.store');
 
 
 
-Route::middleware('auth')->group(function(){
-
+Route::middleware(['auth', 'check.admin'])->group(function(){
 	//servicios
 	Route::resource('servicio', 'ServiceController')->names('service');
-
 	//fluidos
-	Route::resource('fluido', 'FluidoController')->names('fluido');
-
-
-
-	/////////////////////// ROLES /////////////////////////////////////////////////////
-	
-	//usuario
+	Route::resource('fluido', 'FluidoController')->names('fluido');	
+	//usuarios
 	Route::resource('usuario', 'UserController')->names('usuario');
-	
 	//administrador
 	Route::resource('administrador', 'AdministradorController')->names('administrador');
+	//Vehiculos
+	Route::resource('vehiculo', 'VehiculoController')->names('vehiculo');
+	//Talleres
+	Route::resource('taller', 'TallerController')->names('taller');
+	//servicios
+	Route::resource('servicio', 'ServicioController')->names('servicio');
+	//ordenes de trabajo
+	Route::resource('orden_trabajo', 'OrdenTrabajoController')->names('orden_trabajo');
+	//actividades
+	Route::resource('actividad', 'ActividadController')->names('actividad');
+});
 	
-	//supervisor
-	Route::resource('supervisor', 'SupervisorController')->names('supervisor');
 
+
+Route::middleware(['auth', 'check.cliente'])->group(function(){
 	//Cliente
 	Route::resource('cliente', 'ClienteController')->names('cliente');
 	Route::get('servicio_cliente','ServicioClienteController@index')->name('servicio_cliente.index');
 	Route::get('vehiculo_cliente','VehiculoClienteController@index')->name('vehiculo_cliente.index');
-
-
-  
-
-	///////////////////////////////////////////////////////////////////////////////////
-
-	//Vehiculo
-	Route::resource('vehiculo', 'VehiculoController')->names('vehiculo');
-
-	//Taller
-
-	Route::resource('taller', 'TallerController')->names('taller');
-
-	//servicio
-	Route::resource('servicio', 'ServicioController')->names('servicio');
-
-	//orden_trabajo
-
-	Route::resource('orden_trabajo', 'OrdenTrabajoController')->names('orden_trabajo');
-
-	Route::resource('actividad', 'ActividadController')->names('actividad');
-
-
-
-
-
 });
 
 
-
-
-
-
-
+Route::middleware(['auth', 'check.supervisor'])->group(function(){
+	//supervisor
+	Route::resource('supervisor', 'SupervisorController')->names('supervisor');
+});
 
 
 
