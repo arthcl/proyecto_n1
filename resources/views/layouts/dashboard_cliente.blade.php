@@ -107,7 +107,7 @@
 			</li>
 			<li class="nav-item has-treeview menu-close">
 				<!-- <a href="pages/widgets.html" class="nav-link"> -->
-				<a href="{{route('servicio_cliente.index')}}" class="nav-link <?=($path_actual[0] == 'servicio_cliente')?"active":"";?> ">
+				<a href="" class="nav-link <?=($path_actual[0] == 'servicio_cliente') ? "active":"";?> ">
 					<i class="nav-icon fas fa-cogs"></i>
 					<!-- <i class="right fas fa-angle-left"></i> -->
 					<p>Servicios</p>
@@ -115,7 +115,7 @@
 				</a>
 				<ul class="nav nav-treeview">
 					<li class="nav-item">
-						<a href="{{ route('servicio_cliente.index') }}" class="nav-link <?=($path_actual[0] == 'servicio_ciente')?"active":"";?> ">
+						<a href="{{ route('cliente.servicio') }}" class="nav-link <?=($path_actual[0] == 'cliente') ? "active":"";?> ">
 						<i class="far fa-circle nav-icon"></i>
 						<p>Listado</p>
 						</a>
@@ -125,14 +125,20 @@
 
 			<li class="nav-item has-treeview menu-close">
 				<!-- <a href="pages/widgets.html" class="nav-link"> -->
-				<a href="{{route('vehiculo_cliente.index')}}" class="nav-link <?=($path_actual[0] == 'vehiculo_cliente')?"active":"";?>">
-					<i class="nav-icon fas fa-car-side"></i>
+				<a href="" class="nav-link <?=($path_actual[0] == 'vehiculo_cliente') ? "active":"";?> ">
+					<i class="nav-icon fas fa-cogs"></i>
 					<!-- <i class="right fas fa-angle-left"></i> -->
-					<p>Vehículos</p>
+					<p>Vehiculos</p>
 					<i class="right fas fa-angle-left"></i>
-
 				</a>
-
+				<ul class="nav nav-treeview">
+					<li class="nav-item">
+						<a href="{{ route('cliente.vehiculo') }}" class="nav-link <?=($path_actual[0] == 'cliente') ? "active":"";?> ">
+						<i class="far fa-circle nav-icon"></i>
+						<p>Listado</p>
+						</a>
+					</li>
+				</ul>							
 			</li>
 		</ul>
 		</nav>

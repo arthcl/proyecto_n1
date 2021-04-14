@@ -57,7 +57,7 @@
 							<td>{{ $taller->telefono_2 ?? ' - ' }}</td>
 							<td>{{ $taller->email ?? ' - ' }}</td>
 							<td>
-								{{collect([$taller->tiposervicios])}}
+								
 							</td>
 							<td class="text-center">
 								<!-- <a href="  route('usuario.show', $taller->id)  " title=""><i class="fas fa-eye"></i></a> -->

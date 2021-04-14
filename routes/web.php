@@ -48,15 +48,18 @@ Route::middleware(['auth', 'check.admin'])->group(function(){
 
 Route::middleware(['auth', 'check.cliente'])->group(function(){
 	//Cliente
-	Route::resource('cliente', 'ClienteController')->names('cliente');
-	Route::get('servicio_cliente','ServicioClienteController@index')->name('servicio_cliente.index');
-	Route::get('vehiculo_cliente','VehiculoClienteController@index')->name('vehiculo_cliente.index');
+
+	Route::get('cliente', 'ClienteController@index')->name('cliente.index');
+	Route::get('servicio_cliente', 'ClienteController@servicio')->name('cliente.servicio');
+	Route::get('servicio_show', 'ClienteController@servicio_show')->name('cliente.servicio_show');
+	Route::get('vehiculo_cliente', 'ClienteController@vehiculo')->name('cliente.vehiculo');
+
 });
 
 
 Route::middleware(['auth', 'check.supervisor'])->group(function(){
 	//supervisor
-	Route::resource('supervisor', 'SupervisorController')->names('supervisor');
+	Route::get('supervisor', 'SupervisorController@index')->name('supervisor.index');
 });
 
 

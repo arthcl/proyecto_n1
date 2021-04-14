@@ -19,12 +19,6 @@
 <!--------------------------------->
 @section('content')
 <section class="col-lg-12 mx-auto">
-    
- <div class="col-12 text-right">
-  <a class="btn btn-primary" href="{{route('servicio.create')}}" title=""><i class="fa fa-plus" aria-hidden="true"></i>
-   Agregar Servicio
-  </a>
- </div>
 
  <div class="col-12 mt-3 table-responsive">
   <h2 class="h4 text-dark">Pendientes</h2>
@@ -46,7 +40,7 @@
      <td>{{ $pendiente->tipo_servicio->descripcion }}</td>
      <td>{{ $pendiente->taller->descripcion }}</td>
      <td>
-      <a class="btn btn-info btn-sm d-flex" href="{{ route('servicio.show', $pendiente) }}" title="">
+      <a class="btn btn-info btn-sm d-flex" href="{{ route('cliente.servicio_show', $pendiente) }}" title="">
        <i class="fa fa-eye px-2 my-auto" aria-hidden="true"></i>
        Ver
       </a>
@@ -81,7 +75,7 @@
      <td>{{ $activo->tipo_servicio->descripcion }}</td>
      <td>{{ $activo->taller->descripcion }}</td>
      <td>
-      <a class="btn btn-warning btn-sm d-flex" href="{{ route('servicio.show', $activo) }}" title="">
+      <a class="btn btn-warning btn-sm d-flex" href="{{ route('cliente.servicio_show', $activo) }}" title="">
        <i class="fa fa-eye px-2 my-auto" aria-hidden="true"></i>
        Ver
       </a>
