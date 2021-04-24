@@ -31,9 +31,9 @@ class AdministradorController extends Controller
    		 		'vehiculos'	=> Vehiculo::all(),
 
 
-				'servicio_pendiente' => Servicio::where('estado_servicio_id', 1)->get(),
-				'servicio_activo' => Servicio::where('estado_servicio_id', 2)->get(),
-				'servicio_finalizado' => Servicio::where('estado_servicio_id', 3)->get(),
+				'servicios_pendiente' => Servicio::where('estado_servicio_id', 1)->get(),
+				'servicios_activo' => Servicio::where('estado_servicio_id', 2)->get(),
+				'servicios_finalizado' => Servicio::where('estado_servicio_id', 3)->get(),
 
             
         ]);

@@ -23,19 +23,19 @@ class ServicioController extends Controller
 
     public function index(Servicio $servicio)
     {
-        return view('servicio.index', [
+        return view('administrador.servicio.index', [
             'servicio'  => $servicio,
-            'servicio_pendiente' => Servicio::where('estado_servicio_id', 1)->get(),
-            'servicio_activo' => Servicio::where('estado_servicio_id', 2)->get(),
-            'servicio_finalizado' => Servicio::where('estado_servicio_id', 3)->get(),
+            'servicios_pendiente' => Servicio::where('estado_servicio_id', 1)->get(),
+            'servicios_activo' => Servicio::where('estado_servicio_id', 2)->get(),
+            'servicios_finalizado' => Servicio::where('estado_servicio_id', 3)->get(),
         ]);
     }
 
     public function create()
     {
 
-        return view('servicio.create', [
-            'clientes' => User::where('tipo_usuario_id','4')->get(),
+        return view('administrador.servicio.create', [
+            'clientes' => User::where('tipo_usuario_id', 3)->get(),
             'tipo_taller'   => TipoServicio::get(),
         ]);
     }
@@ -53,12 +53,13 @@ class ServicioController extends Controller
 
     public function show(Servicio $servicio)
     {
-        
-    
-        return view('servicio.show', [
-    		'servicio' => $servicio,
             
+        return view('administrador.servicio.show', [
+    		'servicio' => $servicio,
+            'orden_trabajo'=> $servicio->orden_trabajo,
             'estadoservicio' => EstadoServicio::all(),
+
+            'subtotal'  => 'por resolver',
 
         
             
@@ -66,6 +67,7 @@ class ServicioController extends Controller
 
     }
 
+    
 
 
     public function edit($id)
@@ -78,12 +80,12 @@ class ServicioController extends Controller
     {
         $select_cambioestado = $request->input(['estado_servicio_id']);
         if($select_cambioestado == 0){
-            return redirect()->route('servicio.show', $servicio)->with('status-fail', 'se debe ingresar algún estado del servicio');
+            return redirect()->route('administrador.servicio.show', $servicio)->with('status-fail', 'se debe ingresar algún estado del servicio');
         }
         $servicio->update([
             'estado_servicio_id' => $request->input('estado_servicio_id')
         ]);
-        return redirect()->route('servicio.show', $servicio)->with('status', 'el servicio fue modificado con exito');
+        return redirect()->route('administrador.servicio.show', $servicio)->with('status', 'el servicio fue modificado con exito');
     }
 
 

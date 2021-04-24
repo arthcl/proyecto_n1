@@ -1,12 +1,12 @@
-@extends('layouts.dashboard')
-@section('title','Servicio - ' . $servicio)
+@extends('layouts.dashboard_cliente')
+@section('title','Servicio - ' . $servicio->observacion)
 <!--------------------------------->
 @section('content_header')
 	<div class="content-header">
 			<div class="container-fluid">
 				<div class="row mb-2">
 					<div class="col-lg-12 text-center col-sm-6">
-						<h1 class="m-0 text-dark text-capitalize"></h1>
+						<h1 class="m-0 text-dark text-capitalize">{{$servicio->observacion}}</h1>
 						<hr>
 					</div><!-- /.col -->
 				</div><!-- /.row -->
@@ -29,7 +29,7 @@
 								</span>
 							</div>
 							<label class="font-weight-normal form-control" id="">
-								{{ collect($servicio) }}
+								{{ $servicio->vehiculo->patente }}
 							</label>	
 						</div>
 
@@ -41,7 +41,7 @@
 								</span>
 							</div>
 							<label class="font-weight-normal form-control" id="">
-								{{ collect($servicio) }}
+								{{ $servicio->user->nombre }}
 							</label>	
 						</div>
 
@@ -53,7 +53,7 @@
 								</span>
 							</div>
 							<label class="font-weight-normal form-control" id="">
-								{{ collect($servicio) }}
+								{{ $servicio->taller->descripcion }}
 							</label>	
 						</div>
 					
@@ -66,7 +66,7 @@
 								</span>
 							</div>
 							<label class="font-weight-normal form-control" id="">
-								{{ collect($servicio) }}
+								{{ $servicio->tipo_servicio->descripcion }}
 							</label>
 						</div>
 					<!-- FECHA DE CREACIÓN-->
@@ -74,11 +74,11 @@
 						<div class="input-group mb-3">
 							<div class="input-group-prepend w-25">
 								<span class="input-group-text w-100">
-									creación
+									fecha de ingreso
 								</span>
 							</div>
 							<label class="font-weight-normal form-control" id="">
-							{{-- $servicio->created_at->diffForHumans() --}}
+							{{$servicio->created_at}}
 							</label>
 						</div>
 			</div>

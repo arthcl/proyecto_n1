@@ -17,18 +17,14 @@ class OrdenTrabajoFormRequest extends FormRequest
         return [
             'servicio_id'   =>  'required',
             'vigencia'  =>  'required',
+            'estado_orden_trabajo_id'   =>  'required',
             'fecha_inicio' =>  'required',
             'fecha_termino' =>  'required',
-
-            'fecha_ingreso' =>  'required',
-            'km_actual' =>  'required',
-            'km_proximo'    =>  'required',
-            'fecha_proxima_mantencion'  =>  'required',
             'color_original'    =>  'nullable',
             'color_aplicar' =>  'required_with:color_original|nullable',
             'numero_cotizacion' =>  'nullable',
             'orden_compra'  =>  'nullable',
-            'descripcion_ot'    =>  'required',
+            'descripcion'    =>  'required',
         ];
     }
 }

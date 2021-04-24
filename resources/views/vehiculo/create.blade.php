@@ -140,7 +140,7 @@
 				<div class="input-group mb-3">
 					<div class="input-group-prepend w-25">
 						<span class="input-group-text w-100">
-							Extintor
+							Fecha de recarga extintor
 						</span>
 					</div>
 					<input class="form-control" placeholder="fecha de extintor" type="date" name="extintor" value="{{old('extintor')}}">
@@ -160,10 +160,10 @@
 				<div class="input-group mb-3">
 					<div class="input-group-prepend w-25">
 						<span class="input-group-text w-100">
-							Horómetro
+							Horómetro / odometro
 						</span>
 					</div>
-					<input class="form-control" placeholder="Ingrese horómetro" type="number" name="horometro" value="{{old('horometro')}}">
+					<input class="form-control" placeholder="Ingrese horómetro / odometro" type="number" name="horometro" value="{{old('horometro')}}">
 				</div>
 
 				<!-- Nomenclatura neumatico -->

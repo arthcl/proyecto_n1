@@ -39,6 +39,4 @@
 <!-- SCRIPTS UNICOS  -->
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
-
-
 <link href="{{ asset('build/toastr.css') }}" rel="stylesheet"/>

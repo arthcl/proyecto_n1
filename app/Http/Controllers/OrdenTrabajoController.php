@@ -29,5 +29,12 @@ class OrdenTrabajoController extends Controller
       
     }
 
+    public function show(OrdenTrabajo $ot)
+    {
+        return view('orden_trabajo.show', [
+            'orden_trabajo'    =>  $ot,
+        ]);
+    }
+
     
 }

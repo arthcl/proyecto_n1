@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\OrdenTrabajo;
 use Illuminate\Database\Eloquent\Model;
 
 class ItemYServicios extends Model
@@ -18,4 +19,11 @@ class ItemYServicios extends Model
 	{
 		return $this->belongsTo(Actividad::class, 'actividad_id');
 	}
+
+	public function orden_trabajo()
+	{
+		return $this->belongsTo(OrdenTrabajo::class, 'orden_trabajo_id');
+	}
+
+
 }

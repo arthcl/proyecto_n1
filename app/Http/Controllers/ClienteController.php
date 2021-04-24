@@ -33,9 +33,8 @@ class ClienteController extends Controller
     }
     public function servicio_show(Servicio $servicio )
     {
-
         return view('cliente.servicio_cliente.show', [
-            'servicio'  => $servicio->get(),
+            'servicio'  => $servicio,
         ]);
     }
 

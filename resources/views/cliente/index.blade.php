@@ -24,7 +24,7 @@
 						<!-- small box -->
 						<div class="small-box bg-warning">
 							<div class="inner">
-								<h3>{{ $servicio_pendiente->count()}}</h3>
+								<h3>{{ count($servicio_pendiente)}}</h3>
 								<p>Servicios Pendientes</p>
 							</div>
 							<div class="icon">
@@ -52,7 +52,7 @@
 						<!-- small box -->
 						<div class="small-box bg-success">
 							<div class="inner">
-								<h3>{{--count($servicio_finalizado)--}}</h3>
+								<h3>{{count($servicio_finalizado)}}</h3>
 								<p>Servicios Finalizados</p>
 							</div>
 							<div class="icon">

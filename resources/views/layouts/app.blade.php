@@ -15,25 +15,31 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Diseño v2 -->
+
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div id="app" class="d-flex flex-column justify-content-between h-screen">
+	<div id="app" class="">
 		@include('partials.nav')
 	<section>
 		@yield('content')	
 	</section>	
 			
-	
 
-		<footer class="text-center py-3 shadow-lg bg-white text-black-50">
-			@include('partials.footer')			
-		</footer>
+    <footer class="footer container-fluid">
+        @include('partials.main_footer')		  
+    </footer>
+  
+
+				
 	</div>
 </body>
 

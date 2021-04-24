@@ -1,0 +1,2072 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    background-image: url(../img/fondo-pasos.jpg);
+}
+/*
+.slide1{
+    position: relative;
+}
+.titulo1,.texto1,.texto2,.b-contacto{
+    position: absolute;
+}
+.titulo1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 300%;
+    font-weight: 900;
+    color: #150035;
+    top: 20%;
+    left: 15%;
+}
+.texto1{
+    font-weight: 300;
+    color: white;
+    width: 25%;
+    top: 35%;
+    left: 15%;
+}
+.texto2{
+    font-weight: 300;
+    color: white;
+    width: 25%;
+    top: 50%;
+    left: 15%;
+}
+.b-contacto{
+    transition: 0.3s;
+    font-weight: 300;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 5px 20px;
+    text-decoration: none;
+    top: 75%;
+    left: 15%;
+}
+.b-contacto:hover{
+    font-weight: 300;
+    color: white;
+    border: 1px solid #150035;
+    background-color: #150035;
+    border-radius: 3px;
+}
+*/
+
+
+
+
+/* HEADER */
+
+.caja-logo-header{
+    border: 1px solid #0a1928;
+    height: 80px;
+    width: 300px;
+}
+nav ul{
+    text-align: right;
+    width: 100%;
+    padding-left: 20%;
+}
+nav a{
+    text-align: right;
+    font-family: 'Bebas Neue', cursive;
+    color: #0a1928;
+    font-size: 150%;
+}
+.menu{
+    padding-left: 20%;
+}
+#iniciar-sesion {
+    transition: 0.4s;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px 2px 10px;
+    border: 1px solid #0a1928;
+    background-color: #0a1928;
+    border-radius: 5px;
+}
+#iniciar-sesion:hover {
+    color: #0a1928;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px 4px 10px;
+    border: 1px solid #0a1928;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+/* SLIDE 1 */
+
+
+
+
+.slide1{
+    background-image: url(../img/fondo-slide-uno.jpg);
+    background-size: cover;
+    background-position: right;
+    height: 600px;
+    padding: 360px 0px 80px 0px;
+    text-align: center;
+}
+.caja-slide1 h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 200%;
+    font-weight: 700;
+    width: 100%;
+    color: white;
+}
+.caja-slide1 p{
+    width: 80%;
+    margin: 40px auto 20px auto;
+    color: white;
+}
+
+
+
+
+/* SLIDE 2 */
+
+.slide2{
+    background-image: url(../img/app-fondo.jpg);
+    background-size: cover;
+    height: 600px;
+    padding: 95.5px 0px;
+}
+.caja-slide2{
+    padding-left: 5%;
+}
+.caja-slide2 img{
+    width: 75%;
+    margin-left: 100px;
+}
+.caja-slide2 h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 200%;
+    font-weight: 700;
+    width: 80%;
+    margin-top: 13%;
+    color: white;
+}
+.caja-slide2 p{
+    width: 90%;
+    margin-bottom: 10%;
+    color: white;
+}
+.b-app{
+    transition: 0.5s;
+    font-weight: 500;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+.b-app:hover{
+    font-weight: 500;
+    color: #0a1928;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 3px;
+}
+
+
+
+
+
+/* Slide 3  */
+
+
+.slide3{
+    background-image: url(../img/descuento-claro.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    padding: 152.5px 0px;
+}
+.caja-slide3 h4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 120%;
+    font-weight: 500;
+    margin-top: 10%;
+    color: white;
+}
+.caja-slide3 h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 300%;
+    font-weight: 700;
+    width: 100%;
+    color: white;
+}
+.caja-slide3 p{
+    width: 90%;
+    margin-bottom: 10%;
+    color: white;
+}
+
+
+
+
+/* BARRA */
+
+.barra{
+    background-image: linear-gradient(to right, rgba(102,56,154,1), rgba(0,91,151,1));
+    padding: 3px;
+    width: 30%;
+    margin-bottom: 10%;
+    border-radius: 3px;
+}
+
+
+
+/* SECCIÓN QUIENES SOMOS */
+
+.s-qs-home{
+    padding: 5% 0;
+}
+.s-qs-home h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 350%;
+    color: #005b97;
+}
+.s-qs-home p{
+    font-weight: 500;
+}
+.qs-info{
+    padding: 2% 5%;
+}
+.b-qs{
+    transition: 0.5s;
+    font-weight: 500;
+    color: #005b97;
+    border: 1px solid #005b97;
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+.b-qs:hover{
+    font-weight: 500;
+    color: white;
+    border: 1px solid transparent;
+    background-image: linear-gradient(to right, rgba(102,56,154,1), rgba(0,91,151,1));
+    border-radius: 3px;
+}
+.s-qs-home img{
+    width: 90%;
+}
+
+
+
+/* SECCION PARALLAX*/
+
+
+
+.parallax {
+    background-image: linear-gradient(to right, rgba(102,56,154,1), rgba(0,91,151,1));
+    /*background-color: rgba(0, 91, 151, 0.9);*/
+    padding: 50px 0px;
+    /*
+    background-image: url(../img/parallax.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 5% 0%;
+    */
+}
+.parallax h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 200%;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+
+/* PASO A PASO */
+
+.paso-paso{
+    background-image: url(../img/fondo-pasos.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 5% 0;
+}
+.paso-paso h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 350%;
+    font-weight: 700;
+    color: #005b97;
+}
+.paso-paso p{
+    font-weight: 500;
+}
+.barra-paso-paso{
+    background-image: linear-gradient(to right, rgba(102,56,154,1), rgba(0,91,151,1));
+    padding: 3px;
+    width: 10%;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+.pasos-lg{
+    margin: 0 auto;
+}
+.img-paso-paso{
+    width: 95%;
+    margin: 0 auto;
+}
+.pasos-mobile{
+    display: none;
+}
+
+
+
+
+
+
+/* PÁGINA QUIENES SOMOS */
+
+
+.s-quienessomos{
+    padding: 5% 0% 0% 0%;
+}
+.s-quienessomos h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 350%;
+    color: #005b97;
+}
+.s-quienessomos p{
+    font-weight: 500;
+}
+.qs-info{
+    padding: 2% 5%;
+}
+.fondo-bc{
+    background-image: url(../img/fondo-bc.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 60px 0;
+}
+.fondo-bc h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 300%;
+    color: white;
+    font-weight: 700;
+}
+.s-quienessomos{
+    background-image: url(../img/fondo-pasos.jpg)
+}
+.s-quienessomos h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 250%;
+    font-weight: 700;
+    color: #005b97;
+}
+.s-quienessomos ul li{
+    font-weight: 500;
+}
+.foto{
+    padding: 3%;
+}
+.foto img{
+    width: 90%;
+}
+.foto-qs{
+    border: 1px solid #0a1928;
+    height: 100%;
+}
+.resto-info{
+    padding: 0% 0% 1% 0%;
+}
+.resto-info p{
+    font-weight: 500;
+}
+.resto-info ul li{
+    font-weight: 500;
+}
+.barra-talleres{
+    margin-top: 50px;
+    background-image: linear-gradient(to right, rgba(102,56,154,1), rgba(0,91,151,1));
+    padding-top: 10px;
+}
+.barra-talleres h3{
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 350%;
+}
+.caja-taller{
+    border: 1px solid #0a1928;
+    height: 200px;
+}
+.talleres{
+    padding: 1% 0%;
+}
+.fondo-valores{
+    background-color: rgba(102,56,154,1);
+    padding: 20px 0px;
+    margin-bottom: 20px;
+}
+.barra-valores{
+    background-color: white;
+    padding: 3px;
+    width: 10%;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+.separar{
+    border-left: 1px solid white;
+}
+.color{
+    color: white;
+    font-weight: 500;
+    padding-top: 30px;
+}
+.espacio{
+    text-align: center;
+    padding: 20px 30px;
+}
+.espacio h3{
+    color: white;
+    font-weight: 700;
+}
+.titulo-talleres-asociados{
+    font-family: 'Bebas Neue', cursive;
+    color: #0a1928;
+    font-size: 350%;
+    margin-top: 40px;
+}
+
+
+
+/* CONTACTO */
+
+
+.contacto{
+    padding: 5% 0%;
+}
+.titulo-form{
+    font-family: 'Montserrat', sans-serif;
+    color: #005b97;
+    font-size: 250%;
+    font-weight: 700;
+}
+.input{
+    width: 100%;
+    border: 1px solid #005b97;
+    margin-bottom: 10px;
+}
+.b-enviar{
+    transition: 0.5s;
+    font-weight: 500;
+    color: white;
+    border: 1px solid #005b97;
+    background-color: #005b97;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-decoration: none;
+    width: 100%;
+}
+.b-enviar:hover{
+    font-weight: 500;
+    color: #005b97;
+    border: 1px solid #005b97;
+    background-color: white;
+    border-radius: 3px;
+}
+.formulario{
+    border: 1px solid #0a1928;
+}
+.otras-formas-contacto{
+    text-align: center;
+}
+.datos{
+    font-weight: 500;
+    padding: 5% 20%;
+}
+.datos img{
+    width: 90%;
+}
+.dato{
+    padding: 3% 0%;
+}
+
+
+
+
+
+
+
+/*  INGRESAR */
+
+.formulario-login{
+    background-image: url(../img/fondo-slide-uno.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-bottom-right-radius: 50%;
+}
+.caja-login{
+    margin: 0 auto;
+    width: 50%;
+}
+.caja-formulario-contacto label{
+    color: #0a1928;
+    font-weight: 500;
+}
+.logo-login{
+    margin-bottom: 50px;
+}
+.logo-login img{
+    width: 40%;
+}
+.login-img img{
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+
+
+
+.prefooter{
+    /*background-color: #005b97;*/
+    background-image: linear-gradient(to right, rgba(102,56,154,1), rgba(0,91,151,1));
+    border-top-right-radius: 0%;
+    border-top-left-radius: 1000%;
+    padding: 60px 0px;
+}
+
+
+.footer{
+    /*background-color: #005b97;*/
+    background-image: linear-gradient(to right, rgba(102,56,154,1), rgba(0,91,151,1));
+    padding-bottom: 30px;
+}
+.caja-logo-footer img{
+    width: 90%;
+}
+.footer-contacto{
+    text-align: center;
+    padding: 0 50px;
+}
+.footer-contacto img{
+    width: 80%;
+}
+.footer-contacto h4{
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 150%;
+    margin-bottom: 20px;
+}
+footer p{
+    color: white;
+}
+.footer-rrss{
+    text-align: center;
+}
+.footer-rrss h4{
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 150%;
+    margin-bottom: 20px;
+}
+.footer-rrss img{
+    transition: 0.3s;
+    width: 20%;
+    opacity: 0.5;
+}
+.footer-rrss p{
+    margin-top: 10px;
+    font-size: 70%;
+}
+.footer-rrss a:hover img{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+/*
+.email::before{
+    font-family: "FontAwesome";
+    content: "\f0e0";
+}
+*/
+/* MEDIA QUERY */
+
+
+@media only screen and (max-width: 1600px) {
+    body{
+        font-size: 15px;
+    }
+      .titulo1{
+        font-size: 250%;
+        top: 20%;
+    }
+    .titulo2{
+        font-size: 250%;
+        top: 23%;
+    }
+    .texto1{
+        width: 30%;
+        top: 35%;
+    }
+    .texto2{
+        width: 30%;
+        top: 53%;
+        left: 15%;
+    }
+    .caja-slide2 img{
+        margin-left: 0px;
+    }
+    .caja-slide2{
+        top: 5%;
+    }
+    
+    .slide2{
+        padding: 84px 0px;
+    }
+    .slide3{
+        padding: 168px 0px;
+    }
+    .img-paso-paso{
+        width: 80%;
+    }
+  }
+
+
+
+
+
+
+@media only screen and (max-width: 1400px) {
+    body{
+        font-size: 15px;
+    }
+    .slide2{
+        padding: 116px 0px;
+    }
+    .slide3{
+        padding: 165px 0px;
+    }
+    .img-paso-paso{
+        width: 85%;
+    }
+  }
+
+
+
+
+/* ----------------- 768 PX ------------------- */
+
+
+
+
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 15px;
+        text-align: center;
+    }
+    /*SLIDE1*/
+    
+    .slide1{
+        background-image: url(../img/fondo-slide-uno.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 600px;
+        text-align: center;
+        padding: 280px 0px 80px 0px;
+    }
+    .caja-slide1 h2{
+        font-size: 200%;
+        width: 100%;
+    }
+    .caja-slide1 p{
+        width: 90%;
+        margin: 40px auto 20px auto;
+    }
+    
+    
+    /*SLIDE2*/
+    
+    .slide2{
+        padding: 100px 0px;
+        height: 600px;
+    }
+    .caja-slide2{
+        padding-left: 4%;
+        padding-right: 4%;
+        text-align: left;
+    }
+    .caja-slide2 img{
+        width: 100%;
+        margin-left: 10px;
+    }
+    .caja-slide2 h2{
+        font-size: 180%;
+        width: 100%;
+        text-align: left;
+    }
+    .caja-slide2 p{
+        text-align: left;
+        width: 100%;
+    }
+    .b-app{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    /*SLIDE3*/
+    
+    .slide3{
+        background-image: url(../img/fondo-slide-dos-xs.jpg);
+        height: 600px;
+        padding: 300px 0px ;
+    }
+    .caja-slide3 h4{
+        font-size: 120%;
+        font-weight: 500;
+        text-align: center;
+    }
+    .caja-slide3 h2{
+        font-size: 250%;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+    }
+    .caja-slide3 p{
+        width: 90%;
+        margin: 0 auto;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    
+    
+    
+    /* SECCIÓN QUIENES SOMOS */
+
+    .s-qs-home{
+        padding: 5% 0;
+    }
+    .s-qs-home h2{
+        text-align: left;
+        font-size: 250%;
+    }
+    .s-qs-home p{
+        text-align: left;
+    }
+    .b-qs{
+        margin-left: 0px;
+    }
+    
+    .s-qs-home img{
+        width: 100%;
+        margin: 50px 0px;
+    }
+    
+    
+    
+    /*PASOS*/
+    
+    .pasos-lg{
+        display: none;
+    }
+    .pasos-mobile{
+        display: block;
+    }
+    .pasos-mobile img{
+        width: 60%;
+    }
+    
+    
+    /* PÁGINA QUIENES SOMOS */
+ 
+    .s-quienessomos p{
+        font-weight: 500;
+    }
+    .info-quienessomos-p{
+        padding: 0px 100px 0px 100px;
+    }
+    .barra-pqs{
+        margin: 0 auto 50px auto;
+    }
+    .info-quienessomos-p ul li{
+        color: #005b97;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .fondo-bc h2{
+        font-size: 250%;
+    }
+    .s-quienessomos h3{
+        font-size: 200%;
+    }
+    .foto img{
+        width: 60%;
+    }
+    .foto-qs{
+        border: 1px solid #0a1928;
+        height: 100%;
+    }
+    .resto-info{
+        padding: 0% 100px 1% 100px;
+    }
+    .resto-info p{
+        font-weight: 600;
+    }
+    .resto-info ul li{
+        color: #005b97;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .fondo-valores{
+        background-color: rgba(102,56,154,1);
+        padding: 20px 100px;
+        margin-bottom: 20px;
+    }
+    .barra-valores{
+        background-color: white;
+        padding: 3px;
+        width: 10%;
+        margin: 0 auto;
+        border-radius: 3px;
+    }
+    .separar{
+        border-top: 1px solid white;
+        border-left: 1px solid transparent;
+    }
+    .color{
+        color: white;
+        font-weight: 500;
+        padding-top: 30px;
+    }
+    .espacio{
+        text-align: center;
+        padding: 20px 30px;
+    }
+    .espacio h3{
+        color: white;
+        font-weight: 700;
+    }
+    
+    
+    /* CONTACTO */
+
+    .formulario{
+        margin-bottom: 50px;
+    }
+    .otras-formas-contacto{
+        text-align: center;
+    }
+    .datos{
+        font-weight: 500;
+        padding: 5% 30%;
+    }
+    .datos img{
+        width: 100%;
+    }
+    .dato{
+        padding: 3% 0%;
+    }
+    
+    /*  INGRESAR */
+
+    .formulario-login{
+        background-image: url(../img/fondo-pasos.jpg);
+    }
+    .caja-login{
+        margin: 0 auto;
+        width: 50%;
+    }
+    .caja-formulario-contacto label{
+        color: #005b97;
+        font-weight: 500;
+    }
+    .cajita-form{
+        border: 1px solid #005b97;
+    }
+    .logo-login img{
+        margin: 0 auto;
+        width: 60%;
+    }
+    
+    
+    
+    /*FOOTER*/
+    
+    .footer{
+        padding-bottom: 30px;
+    }
+    .caja-logo-footer img{
+        width: 70%;
+        margin-bottom: 60PX;
+    }
+    .footer-contacto{
+        padding: 0 200px;
+    }
+    .correo{
+        margin-bottom: 20px;
+    }
+    .telefono{
+        margin-bottom: 50px;
+    }
+    .footer-contacto img{
+        width: 90%;
+    }
+    .footer-contacto h4{
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 2px;
+        font-size: 200%;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    footer p{
+        color: white;
+    }
+    .footer-rrss{
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .footer-rrss h4{
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 2px;
+        font-size: 200%;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .footer-rrss img{
+        transition: 0.3s;
+        width: 13%;
+        opacity: 0.5;
+    }
+    .footer-rrss p{
+        display: none;
+    }
+
+    
+  }
+
+
+
+/* ------------ 468 PX ------------- */
+
+
+
+
+@media only screen and (max-width: 468px) {
+     body{
+        font-size: 15px;
+    }
+    
+    
+    /* HOME */
+    
+    
+    
+    /*SLIDE1*/
+    
+    .slide1{
+        background-image: url(../img/fondo-slide-uno.jpg);
+        background-size: cover;
+        background-position: CENTER;
+        height: 600px;
+        text-align: center;
+        padding: 100px 0px 80px 0px;
+    }
+    .caja-slide1 h2{
+        font-size: 200%;
+        width: 100%;
+    }
+    .caja-slide1 p{
+        width: 90%;
+        margin: 40px auto 20px auto;
+    }
+    
+    
+    /*SLIDE2*/
+    
+    .slide2{
+        padding: 0px 0px;
+        height: 600px;
+    }
+    .caja-slide2{
+        text-align: center;
+    }
+    .caja-slide2 img{
+        width: 65%;
+        margin-left: 0px;
+    }
+    .caja-slide2 h2{
+        font-size: 150%;
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+    }
+    .caja-slide2 p{
+        text-align: center;
+        width: 100%;
+    }
+    .b-app{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    /*SLIDE3*/
+    
+    .slide3{
+        background-image: url(../img/fondo-slide-dos-xs.jpg);
+        height: 600px;
+        padding: 150px 0px 0px 0px;
+        text-align: left;
+    }
+    .caja-slide3 h4{
+        font-size: 120%;
+        font-weight: 500;
+    }
+    .caja-slide3 h2{
+        font-size: 200%;
+        font-weight: 700;
+        letter-spacing: 3px;
+        width: 100%;
+        color: white;
+    }
+    .caja-slide3 p{
+        width: 90%;
+        margin: 0 auto;
+        font-weight: 500;
+    }
+    
+    /* SECCION QS */
+    
+    .barra{
+        margin: 5% auto 10% auto;
+    }
+    .s-qs-home h2{
+        text-align: center;
+    }
+    .s-qs-home p{
+        text-align: center;
+    }
+    .b-qs{
+        margin-left: 0px;
+    }
+    
+    .s-qs-home img{
+        width: 100%;
+        margin: 50px 0px;
+    }
+    
+    
+    /* SECCION PARALLAX*/
+
+
+
+    .parallax h3{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 130%;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    /*PASOS*/
+    
+    
+    .pasos-lg{
+        display: none;
+    }
+    .pasos-mobile{
+        display: block;
+    }
+    .pasos-mobile img{
+        width: 100%;
+    }
+    
+    
+    /*PAGINA QUIENES SOMOS*/
+    
+    .s-quienessomos p{
+        font-weight: 500;
+    }
+    .info-quienessomos-p{
+        padding: 0px 2px 0px 20px;
+    }
+    .barra-pqs{
+        margin: 0 auto 50px auto;
+    }
+    .info-quienessomos-p ul li{
+        color: #005b97;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .fondo-bc h2{
+        font-size: 250%;
+    }
+    .s-quienessomos h3{
+        font-size: 200%;
+    }
+    .foto img{
+        width: 60%;
+    }
+    .foto-qs{
+        border: 1px solid #0a1928;
+        height: 100%;
+    }
+    
+    
+    
+    
+    /* CONTACTO */
+
+
+    .titulo-form{
+        font-size: 200%;
+    }
+    .formulario{
+        border: 1px solid #005b97;
+    }
+    .otras-formas-contacto{
+        padding-top: 40px;
+    }
+    .datos{
+        padding: 5% 0%;
+    }
+    .datos img{
+        width: 10%;
+    }
+    
+    
+    
+    /*  INGRESAR */
+
+    .formulario-login{
+        background-image: url(../img/fondo-pasos.jpg);
+        background-size: cover;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-bottom-right-radius: 0%;
+    }
+    .caja-login{
+        width: 100%;
+    }
+    .cajita-form{
+        border: 1px solid #005b97;
+    }
+    .caja-formulario-contacto label{
+        color: #005b97;
+    }
+    .logo-login{
+        margin-bottom: 50px;
+    }
+    .logo-login img{
+        width: 100%;
+    }
+    
+    
+    
+    
+    /* FOOTER */
+
+
+    .caja-logo-footer img{
+        width: 100%;
+    }
+    .footer-contacto{
+        padding: 0 20px;
+    }
+    .footer-contacto img{
+        margin-bottom: 10px;
+        width: 11%;
+    }
+    .footer-contacto h4{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: white;
+        font-size: 150%;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    footer p{
+        font-weight: 500;
+        color: white;
+    }
+    .footer-rrss h4{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: white;
+        font-size: 150%;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    .footer-rrss img{
+        width: 12%;
+        opacity: 1;
+    }
+    .footer-rrss p{
+        margin-top: 10px;
+        font-size: 100%;
+    }
+  }
+
+
+
+
+
+/* ----------------- 425 PX ------------------- */
+
+
+
+
+@media only screen and (max-width: 425px) {
+     body{
+        font-size: 15px;
+    }
+    
+    
+    /* HOME */
+    
+    
+    
+    /*SLIDE1*/
+    
+    .slide1{
+        background-image: url(../img/fondo-slide-uno.jpg);
+        background-size: cover;
+        background-position: CENTER;
+        height: 600px;
+        text-align: center;
+        padding: 100px 0px 80px 0px;
+    }
+    .caja-slide1 h2{
+        font-size: 200%;
+        width: 100%;
+    }
+    .caja-slide1 p{
+        width: 90%;
+        margin: 40px auto 20px auto;
+    }
+    
+    
+    /*SLIDE2*/
+    
+    .slide2{
+        padding: 0px 0px;
+        height: 600px;
+    }
+    .caja-slide2{
+        text-align: center;
+    }
+    .caja-slide2 img{
+        width: 65%;
+        margin-left: 0px;
+    }
+    .caja-slide2 h2{
+        font-size: 150%;
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+    }
+    .caja-slide2 p{
+        text-align: center;
+        width: 100%;
+    }
+    .b-app{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    /*SLIDE3*/
+    
+    .slide3{
+        background-image: url(../img/fondo-slide-dos-xs.jpg);
+        height: 600px;
+        padding: 150px 0px 0px 0px;
+        text-align: left;
+    }
+    .caja-slide3 h4{
+        font-size: 120%;
+        font-weight: 500;
+    }
+    .caja-slide3 h2{
+        font-size: 200%;
+        font-weight: 700;
+        letter-spacing: 3px;
+        width: 100%;
+        color: white;
+    }
+    .caja-slide3 p{
+        width: 90%;
+        margin: 0 auto;
+        font-weight: 500;
+    }
+    
+    /* SECCION QS */
+    
+    .barra{
+        margin: 5% auto 10% auto;
+    }
+    
+    
+    /* SECCION PARALLAX*/
+
+
+
+    .parallax h3{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 130%;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    /*PASOS*/
+    
+    
+    .pasos-lg{
+        display: none;
+    }
+    .pasos-mobile{
+        display: block;
+    }
+    .pasos-mobile img{
+        width: 100%;
+    }
+    
+    
+    
+    
+    /* PÁGINA QUIENES SOMOS */
+
+
+    .s-quienessomos{
+        text-align: center;
+    }
+    .fondo-bc{
+        background-image: linear-gradient(to right, rgba(102,56,154,1), rgba(0,91,151,1));
+        padding: 50px 0px 30px 0px;
+    }
+    .fondo-bc h2{
+        font-size: 250%;
+        color: white;
+        font-weight: 700;
+    }
+    .s-quienessomos{
+        padding: 20px 15px;
+    }
+    .s-quienessomos h3{
+        font-size: 200%;
+    }
+    .s-quienessomos ul li{
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #005b97;
+    }
+    .foto{
+        padding: 3%;
+    }
+    .foto img{
+        width: 100%;
+    }
+    .resto-info{
+        padding: 0px 15px 5px 15px;
+    }
+    .resto-info ul li{
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #005b97;
+    }
+    .fondo-valores{
+        background-image: linear-gradient(to bottom, rgba(102,56,154,1), rgba(0,91,151,1));
+        padding: 20px 0px;
+        margin-bottom: 20px;
+    }
+    .barra-valores{
+        width: 20%;
+    }
+    .separar{
+        border-left: 1px solid transparent;
+        border-top: 1px solid white;
+    }
+    
+    
+    
+    
+    /* CONTACTO */
+
+
+    .titulo-form{
+        font-size: 200%;
+    }
+    .formulario{
+        border: 1px solid #005b97;
+    }
+    .otras-formas-contacto{
+        padding-top: 40px;
+    }
+    .datos{
+        padding: 5% 20%;
+    }
+    .datos img{
+        width: 100%;
+    }
+    
+    
+    
+    /*  INGRESAR */
+
+    .formulario-login{
+        background-image: url(../img/fondo-pasos.jpg);
+        background-size: cover;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-bottom-right-radius: 0%;
+    }
+    .caja-login{
+        width: 100%;
+    }
+    .cajita-form{
+        border: 1px solid #005b97;
+    }
+    .caja-formulario-contacto label{
+        color: #005b97;
+    }
+    .logo-login{
+        margin-bottom: 50px;
+    }
+    .logo-login img{
+        width: 100%;
+    }
+    
+    
+    
+    
+    /* FOOTER */
+
+    .footer{
+        padding-bottom: 0px;
+    }
+    .caja-logo-footer img{
+        width: 100%;
+    }
+    .footer-contacto{
+        padding: 0 50px;
+    }
+    .footer-contacto img{
+        margin-bottom: 0px;
+        width: 80%;
+    }
+    .footer-contacto h4{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: white;
+        font-size: 150%;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    footer p{
+        font-weight: 500;
+        color: white;
+    }
+    .footer-rrss h4{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: white;
+        font-size: 150%;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    .footer-rrss img{
+        width: 20%;
+        opacity: 1;
+    }
+    .footer-rrss p{
+        margin-top: 10px;
+        font-size: 100%;
+    }
+  }
+
+
+
+
+
+
+/* ---------------------375PX------------------  */
+
+
+
+
+@media only screen and (max-width: 375px) {
+     body{
+        font-size: 15px;
+    }
+    
+    
+    /* HOME */
+    
+    
+    
+    /*SLIDE1*/
+    
+    .slide1{
+        background-image: url(../img/fondo-slide-uno.jpg);
+        background-size: cover;
+        background-position: CENTER;
+        height: 600px;
+        text-align: center;
+        padding: 100px 0px 80px 0px;
+    }
+    .caja-slide1 h2{
+        font-size: 200%;
+        width: 100%;
+    }
+    .caja-slide1 p{
+        width: 90%;
+        margin: 40px auto 20px auto;
+    }
+    
+    
+    /*SLIDE2*/
+    
+    .slide2{
+        padding: 0px 0px;
+        height: 600px;
+    }
+    .caja-slide2{
+        text-align: center;
+    }
+    .caja-slide2 img{
+        width: 65%;
+        margin-left: 0px;
+    }
+    .caja-slide2 h2{
+        font-size: 150%;
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+    }
+    .caja-slide2 p{
+        text-align: center;
+        width: 100%;
+    }
+    .b-app{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    /*SLIDE3*/
+    
+    .slide3{
+        background-image: url(../img/fondo-slide-dos-xs.jpg);
+        height: 600px;
+        padding: 150px 0px 0px 0px;
+        text-align: left;
+    }
+    .caja-slide3 h4{
+        font-size: 120%;
+        font-weight: 500;
+    }
+    .caja-slide3 h2{
+        font-size: 200%;
+        font-weight: 700;
+        letter-spacing: 3px;
+        width: 100%;
+        color: white;
+    }
+    .caja-slide3 p{
+        width: 90%;
+        margin: 0 auto;
+        font-weight: 500;
+    }
+    
+    /* SECCION QS */
+    
+    .barra{
+        margin: 5% auto 10% auto;
+    }
+    
+    
+    /* SECCION PARALLAX*/
+
+
+
+    .parallax h3{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 130%;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    /*PASOS*/
+    
+    
+    .pasos-lg{
+        display: none;
+    }
+    .pasos-mobile{
+        display: block;
+    }
+    .pasos-mobile img{
+        width: 100%;
+    }
+    
+    
+    
+    
+    /* PÁGINA QUIENES SOMOS */
+
+
+    .s-quienessomos{
+        text-align: center;
+    }
+    .fondo-bc{
+        background-image: linear-gradient(to right, rgba(102,56,154,1), rgba(0,91,151,1));
+        padding: 50px 0px 30px 0px;
+    }
+    .fondo-bc h2{
+        font-size: 250%;
+        color: white;
+        font-weight: 700;
+    }
+    .s-quienessomos{
+        padding: 20px 15px;
+    }
+    .s-quienessomos h3{
+        font-size: 200%;
+    }
+    .s-quienessomos ul li{
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #005b97;
+    }
+    .foto{
+        padding: 3%;
+    }
+    .foto img{
+        width: 100%;
+    }
+    .resto-info{
+        padding: 0px 15px 5px 15px;
+    }
+    .resto-info ul li{
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #005b97;
+    }
+    .fondo-valores{
+        background-image: linear-gradient(to bottom, rgba(102,56,154,1), rgba(0,91,151,1));
+        padding: 20px 0px;
+        margin-bottom: 20px;
+    }
+    .barra-valores{
+        width: 20%;
+    }
+    .separar{
+        border-left: 1px solid transparent;
+        border-top: 1px solid white;
+    }
+    
+    
+    
+    
+    /* CONTACTO */
+
+
+    .titulo-form{
+        font-size: 200%;
+    }
+    .formulario{
+        border: 1px solid #005b97;
+    }
+    .otras-formas-contacto{
+        padding-top: 40px;
+    }
+    .datos{
+        padding: 5% 15%;
+    }
+    .datos img{
+        width: 100%;
+    }
+    
+    
+    
+    /*  INGRESAR */
+
+    .formulario-login{
+        background-image: url(../img/fondo-pasos.jpg);
+        background-size: cover;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-bottom-right-radius: 0%;
+    }
+    .caja-login{
+        width: 100%;
+    }
+    .cajita-form{
+        border: 1px solid #005b97;
+    }
+    .caja-formulario-contacto label{
+        color: #005b97;
+    }
+    .logo-login{
+        margin-bottom: 50px;
+    }
+    .logo-login img{
+        width: 100%;
+    }
+    
+    
+    
+    
+    /* FOOTER */
+
+    .footer{
+        padding-bottom: 0px;
+    }
+    .caja-logo-footer img{
+        width: 100%;
+    }
+    .footer-contacto{
+        padding: 0 40px;
+    }
+    .footer-contacto img{
+        margin-bottom: 10px;
+        width: 90%;
+    }
+    .footer-contacto h4{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: white;
+        font-size: 150%;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    footer p{
+        font-weight: 500;
+        color: white;
+    }
+    .footer-rrss h4{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: white;
+        font-size: 150%;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    .footer-rrss img{
+        width: 20%;
+        opacity: 1;
+    }
+    .footer-rrss p{
+        margin-top: 10px;
+        font-size: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+/*----------------------320PX---------------------  */
+
+
+
+
+@media only screen and (max-width: 320px) {
+     body{
+        font-size: 15px;
+    }
+    
+    
+    /* HOME */
+    
+    
+    
+    /*SLIDE1*/
+    
+    .slide1{
+        background-image: url(../img/fondo-slide-uno.jpg);
+        background-size: cover;
+        background-position: CENTER;
+        height: 600px;
+        text-align: center;
+        padding: 100px 0px 80px 0px;
+    }
+    .caja-slide1 h2{
+        font-size: 200%;
+        width: 100%;
+    }
+    .caja-slide1 p{
+        width: 90%;
+        margin: 40px auto 20px auto;
+    }
+    
+    
+    /*SLIDE2*/
+    
+    .slide2{
+        padding: 0px 0px;
+        height: 600px;
+    }
+    .caja-slide2{
+        text-align: center;
+    }
+    .caja-slide2 img{
+        width: 65%;
+        margin-left: 0px;
+    }
+    .caja-slide2 h2{
+        font-size: 150%;
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+    }
+    .caja-slide2 p{
+        text-align: center;
+        width: 100%;
+    }
+    .b-app{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    /*SLIDE3*/
+    
+    .slide3{
+        background-image: url(../img/fondo-slide-dos-xs.jpg);
+        height: 600px;
+        padding: 150px 0px 0px 0px;
+        text-align: left;
+    }
+    .caja-slide3 h4{
+        font-size: 120%;
+        font-weight: 500;
+    }
+    .caja-slide3 h2{
+        font-size: 200%;
+        font-weight: 700;
+        letter-spacing: 3px;
+        width: 100%;
+        color: white;
+    }
+    .caja-slide3 p{
+        width: 90%;
+        margin: 0 auto;
+        font-weight: 500;
+    }
+    
+    /* SECCION QS */
+    
+    .barra{
+        margin: 5% auto 10% auto;
+    }
+    
+    
+    /* SECCION PARALLAX*/
+
+
+
+    .parallax h3{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 130%;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    /*PASOS*/
+    
+    
+    .pasos-lg{
+        display: none;
+    }
+    .pasos-mobile{
+        display: block;
+    }
+    .pasos-mobile img{
+        width: 100%;
+    }
+    
+    
+    
+    
+    /* PÁGINA QUIENES SOMOS */
+
+
+    .s-quienessomos{
+        text-align: center;
+    }
+    .fondo-bc{
+        background-image: linear-gradient(to right, rgba(102,56,154,1), rgba(0,91,151,1));
+        padding: 50px 0px 30px 0px;
+    }
+    .fondo-bc h2{
+        font-size: 250%;
+        color: white;
+        font-weight: 700;
+    }
+    .s-quienessomos{
+        padding: 20px 15px;
+    }
+    .s-quienessomos h3{
+        font-size: 200%;
+    }
+    .s-quienessomos ul li{
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #005b97;
+    }
+    .foto{
+        padding: 3%;
+    }
+    .foto img{
+        width: 100%;
+    }
+    .resto-info{
+        padding: 0px 15px 5px 15px;
+    }
+    .resto-info ul li{
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #005b97;
+    }
+    .fondo-valores{
+        background-image: linear-gradient(to bottom, rgba(102,56,154,1), rgba(0,91,151,1));
+        padding: 20px 0px;
+        margin-bottom: 20px;
+    }
+    .barra-valores{
+        width: 20%;
+    }
+    .separar{
+        border-left: 1px solid transparent;
+        border-top: 1px solid white;
+    }
+    
+    
+    
+    
+    /* CONTACTO */
+
+
+    .titulo-form{
+        font-size: 200%;
+    }
+    .formulario{
+        border: 1px solid #005b97;
+    }
+    .otras-formas-contacto{
+        padding-top: 40px;
+    }
+    .datos{
+        padding: 5% 10%;
+    }
+    .datos img{
+        width: 100%;
+    }
+    
+    
+    
+    /*  INGRESAR */
+
+    .formulario-login{
+        background-image: url(../img/fondo-pasos.jpg);
+        background-size: cover;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-bottom-right-radius: 0%;
+    }
+    .caja-login{
+        width: 100%;
+    }
+    .cajita-form{
+        border: 1px solid #005b97;
+    }
+    .caja-formulario-contacto label{
+        color: #005b97;
+    }
+    .logo-login{
+        margin-bottom: 50px;
+    }
+    .logo-login img{
+        width: 100%;
+    }
+    
+    
+    
+    
+    /* FOOTER */
+
+    .footer{
+        padding-bottom: 0px;
+    }
+    .caja-logo-footer img{
+        width: 100%;
+    }
+    .footer-contacto{
+        padding: 0 30px;
+    }
+    .footer-contacto img{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .footer-contacto h4{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: white;
+        font-size: 150%;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+    footer p{
+        font-weight: 500;
+        color: white;
+    }
+    .footer-rrss h4{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: white;
+        font-size: 150%;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+    .footer-rrss img{
+        width: 20%;
+        opacity: 1;
+    }
+    .footer-rrss p{
+        margin-top: 10px;
+        font-size: 100%;
+    }
+  }

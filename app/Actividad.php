@@ -19,8 +19,8 @@ class Actividad extends Model
 		return $this->belongsTo(OrdenTrabajo::class, 'orden_trabajo_id');
 	}
 
-	public function item()
+	public function items()
 	{
-		return $this->hasMany(ItemYServicios::class, 'actividad_id');
+		return $this->hasMany(ItemYServicios::class, 'actividad_id', 'id');
 	}
 }

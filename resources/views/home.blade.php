@@ -5,100 +5,135 @@
 
 @section('content') 
 
-<div class="container my-5 p-2">
-    <div class="row">
-
-        <div class="col-12 col-lg-6">
-            <img class="img-fluid mb-4 w-100" 
-            src="{{ asset('dist/img/towing.svg') }}" 
-            alt="Responsive image"
-                
-            >
-        </div>
-
-        <div class="col-12 col-lg-6">
-            <h1 class="dispplay-4 text-primary">
-                EMG Mantenciones
-            </h1>
-            <p class="lead">
-               EMG MANTENCIONES es una plataforma web que gestiona los requerimientos de los usuarios en
-                el ámbito de mantención y reparación de sus vehículos.
-                
-            </p>
-            <hr>
-            <p class="lead">
-                Los servicios mecánicos son prestados por talleres asociados, que cumplen con los estándares
-                calificados en nuestras certificaciones.
-               
-                Además dejamos el link con nuestros talleres asociados en la ciudad de LA SERENA para conocer
-                sus servicios, con una cobertura por toda la cuarta región.
-            </p>
-            <a  class="btn btn-lg btn-block btn-outline-primary" 
-            href="http://www.cars.wobiz.cl" 
-            title=""
-            >Cars
-            </a>
-            <a  class="btn btn-lg btn-block btn-primary" 
-            href="http://www.milkomantencion.com" 
-            title=""
-            >Milko Mantenciones
-            </a>
-
-        </div>       
-    </div>
-</div>
-<hr>
-<section>
-    <div class="row">
-
-
-        <div class="container col-lg-5">
-            <div class="card card-widget widget-user  shadow">
-              <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header text-back " style="background: url('/img/monitorear.svg') 50% 50%;background-size: cover;">
-                
-              </div>
-                <h3 class="widget-user-username text-center py-2">Monitorea tus servicios</h3>
-              <div class="card-footer pt-0">
+<section class="container-fluid">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active slide1">
+            <div class="caja-slide1 container">
                 <div class="row">
-                    <div class="description-block">
-                        <p class="lead">
-                            Da un seguimiento a las intervenciones de tu vehículo.
-                            Además de poder cotizar nuevos servicios y conocer los
-                            diferentes programas de mantenimiento sugeridos.
-                        </p>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h2 class="animate__animated animate__fadeInDown">TODOS LOS CUIDADOS PARA TU AUTO A SOLO  UNOS CLICKS</h2>
+                        <p class="animate__animated animate__fadeInDown">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci. </p>
+                        <a href="#" class="b-app">Contáctanos</a>
                     </div>
                 </div>
-              </div>
             </div>
-        </div>
-
-        <div class="container col-lg-5">
-            <div class="card card-widget widget-user shadow">
-              <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header text-back " style="background: url('/img/nopago.svg') 50% 50%;background-size: cover;">
-                
-              </div>
-              
-                <h3 class="widget-user-username text-center py-2">Plataforma gratuita</h3>
-               
-              <div class="card-footer pt-0">
+          </div>
+          <div class="carousel-item slide2 ">
+            <div class="caja-slide2 container">
                 <div class="row">
-                    <div class="description-block">
-                        <p class="lead">
-                            Servicio de monitoreo completamente gratuito desde que realiza el primer
-                            servicio mecánico a su vehículo, para ello agende con nosotros una hora para una visita a terren o una atención en el taller.
-                        </p>
+                    <div class="caja1 col-lg-6 col-md-6 col-sm-6 col-xs-6 order-last">
+                        <h2 class="">LO VAMOS A BUSCAR Y LO REGRESAMOS A LA PUERTA DE TU CASA</h2>
+                        <P class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci. </P>
+                        <a href="#" class="b-app">Contáctanos</a>
+                    </div>
+                    <div class="caja2 col-lg-6 col-md-6 col-sm-6 col-xs-6 order-first">
+                        <img src="img/celular.png" alt="celular" class="img-responsive">
                     </div>
                 </div>
-              </div>
+            </div>
+          </div>
+          <div class="carousel-item slide3">
+            <div class="caja-slide3 container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-6 col-xs-6">
+                       <h4>20% DE DESCUENTO</h4>
+                        <h2>EN TU SEGUNDA MANTENCION</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci. </p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-6 col-xs-6">
+                        
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+</section>
+
+<section class="container-fluid s-qs-home">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12 qs-info">
+               <h2 class="animate__animated animate__rotateInDownLeft">Quiénes Somos</h2>
+               <div class="barra animate__animated animate__fadeInLeft"></div>
+                <p><strong>EMG Ingeniería y servicios</strong>, es tu solución, somos un taller integral que nos dedicamos a entregar soluciones de reparación mecánica enfocándonos en la importancia que tienen los vehículos para nuestros clientes, ya sea en su uso particular, de trabajo o venta.</p>
+                <p>Nos preocupamos que toda solución se base en la seguridad que esta presenta en el vehiculo, asi se evita que nuestros clientes mantengan algún riesgo en su recorrido.</p>
+                <a href="qs.html" class="b-qs">Leer más</a>
+            </div>
+            <div class="col-lg-5 col-sm-5 col-md-5 col-xs-12">
+                <img src="img/isotipo-logo.png" alt="mecanico"  class="animate__animated animate__fadeInRight img-responsive">
             </div>
         </div>
-
     </div>
 </section>
 
 
+<section class="parallax">
+    <h3 class="animate__animated animate__fadeInDown">¿BUSCAS DONDE MANTENER TU AUTOMÓVIL O FLOTA DE VEHICULOS?</h3>
+</section>
+
+<section class="paso-paso container-fluid">
+    <h2 class="animate__animated animate__fadeInDown">PASO A PASO</h2>
+    <div class="barra-paso-paso"></div>
+    <div class="row pasos-lg container">
+        <div class="pasolg col-lg-12 col-sm-12 col-md-12 col-xs-12">
+            <img src="img/pasos.png" alt="pasos" class="img-responsive img-paso-paso">
+        </div>
+    </div>
+    
+    <div class="pasos-xs container">
+        <div class="row">
+            <div class="pasos-mobile col-lg-12">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        <img src="img/paso-uno.png" alt="paso1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        <img src="img/paso-dos.png" alt="paso2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        <img src="img/paso-tres.png" alt="paso3">
+                    </div>
+                </div>
+            </div>
+        </div>
+           <div class="row">
+               <div class="pasos-mobile col-lg-12">
+                   <div class="row">
+                       <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                            <img src="img/paso-cuatro.png" alt="paso4">
+                        </div>
+                   </div>
+                   <div class="row">
+                       <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                            <img src="img/paso-cinco.png" alt="paso5">
+                        </div>
+                   </div>
+                </div>
+           </div>
+    </div>
+</section>
+<section class="container-fluid prefooter">
+    
+</section>
 
 
 @endsection

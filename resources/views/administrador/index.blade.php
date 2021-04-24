@@ -24,7 +24,7 @@
 							<div class="inner">
 								
 
-								<h3>{{ $servicio_pendiente->count() }}</h3>
+								<h3>{{ count($servicios_pendiente) }}</h3>
 								<p>Servicios Pendientes </p>
 							</div>
 							<div class="icon">
@@ -39,7 +39,7 @@
 						<div class="small-box bg-info">
 							<div class="inner">
 
-								<h3>{{ $servicio_activo->count() }}</h3>
+								<h3>{{ count($servicios_activo) }}</h3>
 								<p>Servicios Ejecutando</p>
 							</div>
 							<div class="icon">
@@ -53,7 +53,7 @@
 						<!-- small box -->
 						<div class="small-box bg-success">
 							<div class="inner">
-							<h3>{{ $servicio_finalizado->count() }}</h3>
+							<h3>{{ count($servicios_finalizado) }}</h3>
 								<p>Servicios Finalizados</p>
 							</div>
 							<div class="icon">

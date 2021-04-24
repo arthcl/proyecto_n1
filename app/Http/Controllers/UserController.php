@@ -33,7 +33,7 @@ class UserController extends Controller
 
         //where, whereIn, whereBetween.
 
-        $cliente = User::where('tipo_usuario_id','4')->paginate(5);
+        $cliente = User::where('tipo_usuario_id', 3)->paginate(5);
 
         $roles = User::whereIntegerInRaw('tipo_usuario_id', [1,2,3])->paginate(5);
 

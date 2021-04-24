@@ -40,7 +40,7 @@
      <td>{{ $pendiente->tipo_servicio->descripcion }}</td>
      <td>{{ $pendiente->taller->descripcion }}</td>
      <td>
-      <a class="btn btn-info btn-sm d-flex" href="{{ route('cliente.servicio_show', $pendiente) }}" title="">
+      <a class="btn btn-info btn-sm d-flex" href="{{ route('cliente.servicio_cliente', $pendiente) }}" title="">
        <i class="fa fa-eye px-2 my-auto" aria-hidden="true"></i>
        Ver
       </a>
@@ -75,7 +75,7 @@
      <td>{{ $activo->tipo_servicio->descripcion }}</td>
      <td>{{ $activo->taller->descripcion }}</td>
      <td>
-      <a class="btn btn-warning btn-sm d-flex" href="{{ route('cliente.servicio_show', $activo) }}" title="">
+      <a class="btn btn-warning btn-sm d-flex" href="{{ route('cliente.servicio_cliente', $activo) }}" title="">
        <i class="fa fa-eye px-2 my-auto" aria-hidden="true"></i>
        Ver
       </a>
@@ -118,7 +118,7 @@
      <td>{{ $finalizado->tipo_servicio->descripcion }}</td>
      <td>{{ $finalizado->taller->descripcion }}</td>
      <td>
-      <a class="btn btn-secondary btn-sm d-flex" href="{{ route('servicio.show', $finalizado) }}" title="">
+      <a class="btn btn-secondary btn-sm d-flex" href="{{ route('cliente.servicio_cliente', $finalizado) }}" title="">
        <i class="fa fa-eye px-2 my-auto" aria-hidden="true"></i>
        Ver
       </a>

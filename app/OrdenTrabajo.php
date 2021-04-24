@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\ItemYServicios;
 use Illuminate\Database\Eloquent\Model;
 
 class OrdenTrabajo extends Model
@@ -23,6 +24,11 @@ class OrdenTrabajo extends Model
 	public function actividad()
 	{
 		return $this->hasMany(Actividad::class);
+	}
+
+	public function estado_orden_trabajo()
+	{
+		return $this->belongsTo(EstadoOrdenTrabajo::class);
 	}
 
 

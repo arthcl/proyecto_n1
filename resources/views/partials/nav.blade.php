@@ -1,3 +1,5 @@
+{{-- 
+<!--
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow d-flex justify-content-between">
 		<div class="container">
 			<a class="navbar-brand" href="{{ route('home') }}">
@@ -53,6 +55,54 @@
 		</ul>	
 	</div>
 </nav>
+
+
+
+
+-->
+--}}
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow d-flex justify-content-between">
+	<div class="container">
+		<a class="navbar-brand" href="{{ route('home') }}">
+			<div class="caja-logo-header">
+				
+			</div>
+		</a>
+	
+		<button class="navbar-toggler" type="button" 
+			data-toggle="collapse" 
+			data-target="#navbarSupportedContent" 
+			aria-controls="navbarSupportedContent" 
+			aria-label="{{__('Toggle navigation')}}">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+	<div class="collapse navbar-collapse menu" id="navbarSupportedContent">		
+		<ul class="nav nav-pills ml-auto">
+			<li class=" nav-item">
+				<a class="nav-link " href="{{ route('home')}}" title=""> 
+					@lang ('Home')
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="{{route('about')}}" title="">
+					@lang ('About')
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="{{route('contact')}}" title="">
+					@lang ('Contact')
+				</a>
+			</li>
+			<li id="login-form" class="nav-item">
+				<a class="nav-link " id="iniciar-sesion" href="{{route('login')}}" title="">
+					@lang ('Login')
+				</a>
+			</li>
+		</ul>	
+	</div>
+</div>
+</nav>  
+
 
 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 	@csrf
