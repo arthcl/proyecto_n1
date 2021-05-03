@@ -33,7 +33,7 @@ class User extends Authenticatable
 
     public function vehiculos()
     {
-        return $this->hasMany(Vehiculo::class); //tiene muchos "vehiculos"
+        return $this->hasMany(Vehiculo::class, 'users_id', 'id'); //tiene muchos "vehiculos"
     }
     public function genero() //generos() + _id = generos_id
     {

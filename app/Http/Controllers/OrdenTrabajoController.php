@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests\OrdenTrabajoFormRequest;
-
-
-use App\OrdenTrabajo;
 use App\Servicio;
+use App\Actividad;
+use App\OrdenTrabajo;
+
+
+use Illuminate\Http\Request;
+use App\Http\Requests\ActividadFormRequest;
+use App\Http\Requests\OrdenTrabajoFormRequest;
 
 
 
@@ -29,12 +31,18 @@ class OrdenTrabajoController extends Controller
       
     }
 
-    public function show(OrdenTrabajo $ot)
+    public function show(OrdenTrabajo $orden_trabajo)
     {
-        return view('orden_trabajo.show', [
-            'orden_trabajo'    =>  $ot,
+        return view('administrador.ot_sistema.show', [
+            
+            'orden_trabajo' => $orden_trabajo,
         ]);
     }
+
+
+
+
+
 
     
 }

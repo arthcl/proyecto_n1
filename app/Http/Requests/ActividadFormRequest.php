@@ -16,7 +16,6 @@ class ActividadFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'orden_trabajo_id'   =>  'required',
             'vigencia'  =>  'required',
             'descripcion'    =>  'required',
             

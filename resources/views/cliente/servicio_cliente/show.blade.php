@@ -25,7 +25,7 @@
 						<div class="input-group mb-3">
 							<div class="input-group-prepend w-25">
 								<span class="input-group-text w-100 text-justify">
-									Vehículo
+									Veh&iacuteculo
 								</span>
 							</div>
 							<label class="font-weight-normal form-control" id="">
@@ -88,6 +88,58 @@
 		</div>
 
 		<hr>
+
+<div class="mt-3">
+    <h4 class=" mb-3">
+      <span class="text-muted">Actividad</span>
+      <span class="badge bg-secondary rounded-pill">{{ $servicio->orden_trabajo()->count()}}</span>
+    </h4>
+    <ul class="list-group mb-3">
+        @forelse ($servicio->orden_trabajo as $item_ot)
+
+		@php
+		$suma = 0;    
+	  	@endphp
+            <li class="list-group-item list-group-item-primary">
+                <div class="">
+                <h6 class="my-0">{{$item_ot->descripcion}}</h6>
+                   @foreach ($item_ot->actividad as $item_actividad)
+                        <li class="list-group-item d-flex justify-content-between ">
+                            <strong>{{ $item_actividad->descripcion }}</strong>
+                            <strong>$ {{ number_format($item_actividad->items->sum('total'), 2)}}</strong>
+
+                              @foreach ($item_actividad->items as $item) 
+							  @php
+							  $suma+=$item->total;   //se soman los totales de cada ot
+							  @endphp 
+                              <li class="list-group-item text-muted d-flex justify-content-between ">
+                                <span>{{$item->item }}</span>
+
+                              </li>
+                            @endforeach 
+                        </li>                                     
+                    @endforeach
+                    <li class="list-group-item d-flex justify-content-between ">
+                      <strong>Total (PCL)</strong>
+					  <strong>$ {{number_format($suma, 2)}}</strong>
+
+                      
+                    </li> 
+                </div>
+                 
+            </li>
+ 
+       		@empty
+            <h6 class="my-0">Sin orden de trabajo registrada</h6>
+        	@endforelse 
+
+
+
+
+    </ul>
+  </div>
+
+
 </section>
 
 @endsection

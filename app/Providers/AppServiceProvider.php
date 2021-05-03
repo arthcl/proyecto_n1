@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-
+use App\OrdenTrabajo;
 use App\Servicio;
 
 use Illuminate\Support\Facades\Auth;
@@ -45,6 +45,7 @@ class AppServiceProvider extends ServiceProvider
                 $view->with('servicio_finalizado', $servicio_finalizado);
 
             }
+
 
         });
             

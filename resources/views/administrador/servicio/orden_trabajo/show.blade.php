@@ -3,7 +3,7 @@
 
 <div class=" order-md-2 mb-4 mt-4">
   <h4 class="d-flex justify-content-between align-items-center mb-3 ">
-    <a href=" {{route('orden_trabajo.show', $ot->id)}}"><span class="text-primary">{{ $ot->descripcion }}</span></a>
+    <a href=" {{route('orden_trabajo.show', $ot )}}"><span class="text-primary">{{ $ot->descripcion }}</span></a>
     <span class="badge badge-secondary badge-pill">{{ $ot->estado_orden_trabajo->descripcion }}</span>
   </h4>
   <ul class="list-group mb-3 ">

@@ -39,7 +39,6 @@ nav a{
 }
 .sub{
     transition: 0.8s;
-    border-bottom: 1px solid transparent;
 }
 .sub:hover{
     border-bottom: 1px solid white;
@@ -629,10 +628,6 @@ footer p{
     }
     .img-paso-paso{
         width: 80%;
-    }
-
-    .menu{
-        padding-left: 0%;
     }
   }
 

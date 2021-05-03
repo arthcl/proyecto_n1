@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Database\Eloquent\Collection;
-
 use App\User;
 use App\Servicio;
+
+use App\Vehiculo;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Collection;
 
 class ClienteController extends Controller
 {
@@ -21,7 +22,7 @@ class ClienteController extends Controller
        
         return view('cliente.index', [
             'usuario' =>  Auth::user(),
-            'servicios' => Auth::user()->servicios
+            'servicios' => Auth::user()->servicios->all(),
 
         ]);
 
@@ -40,7 +41,9 @@ class ClienteController extends Controller
 
     public function vehiculo()
     {
-        return view('cliente.vehiculo_cliente.index');
+        return view('cliente.vehiculo_cliente.index', [
+            'vehiculo'  => Auth::user()->vehiculos->all(),
+        ]);
     }
 
 }

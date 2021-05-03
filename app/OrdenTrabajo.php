@@ -13,7 +13,7 @@ class OrdenTrabajo extends Model
 	 protected $table = 'orden_trabajo';
 
 	 public function getRouteKeyName(){
-    	return 'descripcion_ot';
+    	return 'descripcion';
     }
 
 	public function servicio()
@@ -29,6 +29,11 @@ class OrdenTrabajo extends Model
 	public function estado_orden_trabajo()
 	{
 		return $this->belongsTo(EstadoOrdenTrabajo::class);
+	}
+
+	public function items()
+	{
+		return $this->hasMany(ItemYServicios::class);
 	}
 
 

@@ -9,18 +9,7 @@
             <form class="form-inline" action="{{ route('actividad.store') }}" method="POST" accept-charset="utf-8">
                 @csrf
                 <input type="hidden" value="1" name="vigencia">
-                    <div class="col-5 mb-3">
-                      <label for="country">Orden de trabajo</label>
-                      <select class="custom-select w-100" name="orden_trabajo_id" required="">
-                        <option value="">Seleccionar...</option>
-                        @foreach ($servicio->orden_trabajo as $itemOT)
-                            <option value="{{$itemOT->id }}">{{$itemOT->descripcion_ot}}</option>
-                        @endforeach
-                      </select>
-                      <div class="invalid-feedback">
-                        Please select a valid country.
-                      </div>
-                    </div>
+
                     <div class="col-5 mb-3">
                       <label for="state">Actividad</label>
                       <select class="custom-select w-100" name="descripcion" required="">

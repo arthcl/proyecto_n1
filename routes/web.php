@@ -39,7 +39,7 @@ Route::middleware(['auth', 'check.admin'])->group(function(){
 	//servicios
 	Route::resource('servicio', 'ServicioController')->names('servicio');
 	//ordenes de trabajo
-	Route::resource('orden_trabajo', 'OrdenTrabajoController')->names('orden_trabajo');
+	Route::resource('servicio/orden_trabajo', 'OrdenTrabajoController')->names('orden_trabajo');
 	//actividades
 	Route::resource('actividad', 'ActividadController')->names('actividad');
 });
@@ -60,6 +60,8 @@ Route::middleware(['auth', 'check.cliente'])->group(function(){
 Route::middleware(['auth', 'check.supervisor'])->group(function(){
 	//supervisor
 	Route::get('supervisor', 'SupervisorController@index')->name('supervisor.index');
+	Route::get('servicio_taller', 'SupervisorController@servicios')->name('servicio_taller.index');
+
 });
 
 

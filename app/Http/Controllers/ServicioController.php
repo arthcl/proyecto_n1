@@ -59,7 +59,6 @@ class ServicioController extends Controller
             'orden_trabajo'=> $servicio->orden_trabajo,
             'estadoservicio' => EstadoServicio::all(),
 
-            'subtotal'  => 'por resolver',
 
         
             

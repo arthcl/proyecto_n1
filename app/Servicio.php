@@ -38,7 +38,7 @@ class Servicio extends Model
 
    public function orden_trabajo()
    {
-       return $this->hasMany(OrdenTrabajo::class, 'servicio_id', 'id');
+       return $this->hasMany(OrdenTrabajo::class);
    }
 
    public function estado_servicio()

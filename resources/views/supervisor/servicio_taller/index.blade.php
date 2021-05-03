@@ -1,5 +1,5 @@
 
-@extends('layouts.dashboard')
+@extends('layouts.dashboard_supervisor')
 
 
 @section('title','Servicios')

@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div id="app" class="">
+	<div id="app" class="d-flex flex-column justify-content-between h-screen">
 		@include('partials.nav')
 	<section>
 		@yield('content')	

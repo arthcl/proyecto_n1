@@ -22,7 +22,8 @@
 		<a href="{{ route('home') }}" class="nav-link">Inicio</a>
 		</li>
 		<li class="nav-item d-none d-sm-inline-block">
-		<a href="{{ route('administrador.index') }}" class="nav-link ">Panel administrador</a>		
+		
+		<a href="{{ route('supervisor.index') }}" class="nav-link ">Panel Supervisor</a>		
 		</li>
 	</ul>
 		<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -98,7 +99,7 @@
 			<!-- ADMINISTRADOR -->
 			<li class="nav-item">
 				<!-- <a href="pages/widgets.html" class="nav-link"> -->
-				<a href="{{route('administrador.index')}}" class="nav-link <?=($path_actual[0] == 'administrador')?"active":"";?> ">
+				<a href="{{route('supervisor.index')}}" class="nav-link <?=($path_actual[0] == 'supervisor')?"active":"";?> ">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<!-- <i class="right fas fa-angle-left"></i> -->
 					<p>Dashboard</p>
@@ -107,7 +108,7 @@
 			</li>
 			<li class="nav-item has-treeview menu-close">
 				<!-- <a href="pages/widgets.html" class="nav-link"> -->
-				<a href="{{route('servicio.index')}}" class="nav-link <?=($path_actual[0] == 'servicio')?"active":"";?> ">
+				<a href="{{route('servicio_taller.index')}}" class="nav-link <?=($path_actual[0] == 'servicio_taller')?"active":"";?> ">
 					<i class="nav-icon fas fa-cogs"></i>
 					<!-- <i class="right fas fa-angle-left"></i> -->
 					<p>Servicios</p>
@@ -115,7 +116,7 @@
 				</a>
 				<ul class="nav nav-treeview">
 					<li class="nav-item">
-						<a href="{{ route('servicio.index') }}" class="nav-link <?=($path_actual[0] == 'servicio')?"active":"";?> ">
+						<a href="{{ route('servicio_taller.index') }}" class="nav-link <?=($path_actual[0] == 'servicio_taller')?"active":"";?> ">
 						<i class="far fa-circle nav-icon"></i>
 						<p>Listado</p>
 						</a>

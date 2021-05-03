@@ -20,11 +20,6 @@
 @section('content')
 <section class="col-lg-12 connectedSortable mx-auto">
     
-	<div class="col-12 text-right">
-		<a class="btn btn-primary" href="{{route('vehiculo.create')}}" title=""><i class="fa fa-plus" aria-hidden="true"></i>
-			Agregar Vehículo
-		</a>
-	</div>
 
 	<div class="col-12 mt-3 table-responsive">
 		<h2 class="h4 text-dark">Lista de Vehículos</h2>
