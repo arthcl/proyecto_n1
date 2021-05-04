@@ -20,11 +20,25 @@ class ActividadController extends Controller
     
     public function store(ActividadFormRequest $request)
     {
-        Actividad::create($request->validated());
+        $actividad = Actividad::create($request->validate([
+               
+            'vigencia'          =>  'required',
+           'orden_trabajo_id'   =>  'required',
+           'descripcion'       =>  'required',
 
-        return redirect()
-        ->back()
-        ->with('status', 'el/los items fueron creados exitosamente!');
+        ]));
+        foreach ($request->item as $key=>$item) {
+          $data = new ItemYServicios();
+          $data->actividad_id = $actividad->id;
+          $data->vigencia = $request->vigencia;
+          $data->item = $item;
+          $data->unidad = $request->unidad[$key];
+          $data->cantidad = $request->cantidad[$key];
+          $data->valor = $request->valor[$key];
+          $data->total = $request->total[$key];
+          $data->save();
     }
+
+}
     
 }

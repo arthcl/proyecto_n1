@@ -2,13 +2,14 @@
     <div class="card mt-3">
         <div class="card-header">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Ingresar Actividad</span>
+                <span class="text-muted">Ingresar </span>
             </h4>
         </div>
         <div class="card-body">
             <form class="form-inline" action="{{ route('actividad.store') }}" method="POST" accept-charset="utf-8">
                 @csrf
                 <input type="hidden" value="1" name="vigencia">
+                <input type="hidden" value="{{ $orden_trabajo->id }}" name="orden_trabajo_id">
 
                     <div class="col-5 mb-3">
                       <label for="state">Actividad</label>
