@@ -51,7 +51,7 @@
 							
 							<td class="text-center">
 
-								<a class="btn btn-info btn-sm d-flex" href="{{ route('vehiculo.show', $v) }}" title="">
+								<a class="btn btn-info btn-sm d-flex" href="{{ route('cliente.vehiculo_cliente', $v) }}" title="">
 									<i class="fa fa-eye px-2 my-auto" aria-hidden="true"></i>
 									Ver
 								</a>

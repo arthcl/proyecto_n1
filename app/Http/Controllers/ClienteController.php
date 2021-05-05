@@ -46,4 +46,11 @@ class ClienteController extends Controller
         ]);
     }
 
+    public function vehiculo_show(Vehiculo $vehiculo )
+    {
+        return view('cliente.vehiculo_cliente.show', [
+            'vehiculo'  => $vehiculo,
+        ]);
+    }
+
 }

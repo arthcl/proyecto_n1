@@ -125,14 +125,18 @@
 						@php
 							$total_ot = $item->orden_trabajo->count();
 							$ot_realizadas = count($item->orden_trabajo->where('estado_orden_trabajo_id', 2));
+							$porcentaje = 0;
+							if($ot_realizadas > 0)
+							{
 							$porcentaje = ($ot_realizadas*100)/$total_ot;
+							}
 							$porcentaje = round($porcentaje, 2);
 						@endphp
 						<div class="progress sm">
 							<div class="progress-bar progress-bar-striped progress-bar-animated @if($porcentaje == 100) bg-success @else bg-info @endif" role="progressbar" aria-valuenow="{{$porcentaje}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$porcentaje}}%">
 								@if($porcentaje == 100)
 									Servicio completado 
-									@else {{ $porcentaje }}% 
+								@else {{ $porcentaje }}% 
 								@endif
 							</div>
 						</div>

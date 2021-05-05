@@ -53,6 +53,8 @@ Route::middleware(['auth', 'check.cliente'])->group(function(){
 	Route::get('servicio_cliente', 'ClienteController@servicio')->name('cliente.servicio');
 	Route::get('servicio_cliente/{servicio}', 'ClienteController@servicio_show')->name('cliente.servicio_cliente');
 	Route::get('vehiculo_cliente', 'ClienteController@vehiculo')->name('cliente.vehiculo');
+	Route::get('vehiculo_cliente/{vehiculo}', 'ClienteController@vehiculo_show')->name('cliente.vehiculo_cliente');
+
 
 });
 

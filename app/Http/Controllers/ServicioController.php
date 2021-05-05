@@ -84,7 +84,7 @@ class ServicioController extends Controller
         $servicio->update([
             'estado_servicio_id' => $request->input('estado_servicio_id')
         ]);
-        return redirect()->route('administrador.servicio.show', $servicio)->with('status', 'el servicio fue modificado con exito');
+        return redirect()->route('servicio.show', $servicio)->with('status', 'el servicio fue modificado con exito');
     }
 
 

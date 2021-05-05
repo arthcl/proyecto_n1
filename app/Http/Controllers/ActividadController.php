@@ -37,8 +37,11 @@ class ActividadController extends Controller
           $data->valor = $request->valor[$key];
           $data->total = $request->total[$key];
           $data->save();
-    }
+        }
 
-}
+        return redirect()->back()->with('status', 'la actividad fue creada con exito');
+
+
+    }
     
 }

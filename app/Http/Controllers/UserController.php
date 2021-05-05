@@ -35,7 +35,7 @@ class UserController extends Controller
 
         $cliente = User::where('tipo_usuario_id', 3)->paginate(5);
 
-        $roles = User::whereIntegerInRaw('tipo_usuario_id', [1,2,3])->paginate(5);
+        $roles = User::whereIntegerInRaw('tipo_usuario_id', [1,2])->paginate(5);
 
     	return view('usuario.index', [
             'cliente'   => $cliente,
