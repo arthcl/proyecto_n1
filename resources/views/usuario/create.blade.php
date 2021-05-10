@@ -47,13 +47,15 @@
 						<hr class="my-4 text-dark">
 						
 						<!---TIPO CLIENTE -->
+					<div id="tipo_cliente" type="">
+
 		                <div class="input-group mb-3">
 		                	<div class="input-group-prepend w-25">
 		                		<span class="input-group-text w-100">
 		                			Tipo cliente
 		                		</span>
 		                	</div>
-							<select placeholder="Seleccione tipo cliente" class="form-control" id="t_cliente" name="t_cliente">
+							<select placeholder="Seleccione tipo cliente"  class="form-control" id="t_cliente" name="t_cliente">
 								<option value="0">Seleccionar...</option>
 								@foreach ($tipo_cliente as $tc)
 									<option value="{{$tc->id}}">
@@ -62,8 +64,11 @@
 								@endforeach 
 							</select>		
 		                </div>
+					</div>
 
 						<!---TALLER ASOCIADO -->
+					<div id="taller_asociado">
+
 		                <div class="input-group mb-3">
 		                	<div class="input-group-prepend w-25">
 		                		<span class="input-group-text w-100">
@@ -79,6 +84,8 @@
 								@endforeach
 							</select>		
 		                </div>
+					</div>
+
 		                <!---RUT -->
 							<div class="input-group mb-3">
 								<div class="input-group-prepend w-25">

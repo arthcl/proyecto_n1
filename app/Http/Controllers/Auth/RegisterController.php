@@ -57,13 +57,13 @@ class RegisterController extends Controller
         
         return Validator::make($data, [
             't_usuario'         => ['required', 'numeric'],
-            't_cliente'         => ['required_if:t_usuario, 4 | numeric | digits:1'],
-            't_asociado'        => ['required_if:t_usuario, 2 | numeric |nullable'],
+            't_cliente'         => ['required_if:t_usuario, 3 | numeric | digits:1 | nullable'],
+            't_asociado'        => ['required_if:t_usuario, 2| digits:1 | nullable'],
             'rut'               => ['required',' string', 'max:11', new ValidChileanRut(new ChileRut)],
             'nombre'            => ['required', 'string', 'max:50'],
             'a_paterno'         => ['required_if:t_cliente, 2 | string|max:50|nullable'],
             'a_materno'         => ['required_if:t_cliente, 2 | string|max:50|nullable'],
-            'genero'            => ['required_if:t_usuario, 4 | required_if:t_cliente, 2 |numeric|digits:1|nullable'], 
+            'genero'            => ['required_if:t_usuario, 3 | required_if:t_cliente, 2 |numeric|digits:1|nullable'], 
             'giro_rubro'        => ['string', 'max:200'],
             'razon_social'      => ['required_if:t_cliente, 1 | string | max:200 | nullable'],
             'direccion'         => ['string', 'max:100'],

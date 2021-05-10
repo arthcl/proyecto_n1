@@ -3,6 +3,8 @@ $(document).ready(function ()
 
     $("#cliente_particular").hide();
     $("#cliente_empresa").hide();
+            $('#tipo_cliente').hide();
+            $('#taller_asociado').hide();
 
     $('#t_usuario').on('change', function()
     {
@@ -16,6 +18,12 @@ $(document).ready(function ()
 
             $("#cliente_empresa").hide();
             $("#cliente_particular").show('slow');
+            $('#tipo_cliente').hide('slow');
+            $('#taller_asociado').hide('slow');
+
+
+
+
 
             // TIPO CLIENTE - NO APLICA
             $("#t_cliente").val("3");
@@ -41,10 +49,13 @@ $(document).ready(function ()
             }
         }
         // SI ES SUPERVISOR
-        else if (id_tipousuario == 2 || id_tipousuario == 3)
+        else if (id_tipousuario == 2)
         {
 
             $("#cliente_particular").show('slow');
+            $('#tipo_cliente').hide();
+            $("#taller_asociado").show('slow');
+
 
             // TIPO CLIENTE - NO APLICA
             $("#t_cliente").val("3");
@@ -64,10 +75,14 @@ $(document).ready(function ()
 
         }
         // SI ES CLIENTE
-        else if (id_tipousuario == 4)
+        else if (id_tipousuario == 3)
         {
             $("#cliente_empresa").hide();
             $("#cliente_particular").show('slow');
+            $("#tipo_cliente").show('slow');
+            $("#taller_asociado").hide('slow');
+
+
 
             $("#t_asociado").val("1");
 
@@ -89,6 +104,11 @@ $(document).ready(function ()
         }
         else
         {
+            $("#cliente_empresa").hide('slow');
+            $("#cliente_particular").hide('slow');
+            $('#tipo_cliente').hide('slow');
+            $('#taller_asociado').hide('slow');
+
             if ($('#t_cliente').prop('readonly'))
             {
                 $("#t_cliente").val("0");

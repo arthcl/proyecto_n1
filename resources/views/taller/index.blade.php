@@ -57,6 +57,7 @@
 							<td>{{ $taller->telefono_2 ?? ' - ' }}</td>
 							<td>{{ $taller->email ?? ' - ' }}</td>
 							<td>
+								{{$tipo_servicio}}
 								
 							</td>
 							<td class="text-center">

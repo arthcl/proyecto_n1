@@ -113,10 +113,14 @@
 					@empty
 						<p class="lead text-secondary">No existen registros aún</p>
 					@endforelse
-				</tbody>
-			</table>				 
-		</div>
 
+				</tbody>
+
+			</table>
+			{{$roles->links()}}
+				 
+		</div>
+		
 </section>
 <!---------------------------------------------------------------->
 @endsection

@@ -17,7 +17,7 @@ class ActividadFormRequest extends FormRequest
     {
         return [
             'vigencia'  =>  'required',
-            'descripcion'    =>  'required',
+            'categoria_actividad_id'    =>  'required',
             
         ];
     }

@@ -42,6 +42,13 @@ Route::middleware(['auth', 'check.admin'])->group(function(){
 	Route::resource('servicio/orden_trabajo', 'OrdenTrabajoController')->names('orden_trabajo');
 	//actividades
 	Route::resource('actividad', 'ActividadController')->names('actividad');
+	//categoria actividades
+	Route::resource('categoria_actividad', 'CategoriaActividadController')->names('categoria_actividad');
+
+	//itemservicio
+	Route::resource('item_servicio', 'ItemYServiciosController')->names('item_servicio');
+
+
 });
 	
 

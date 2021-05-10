@@ -180,6 +180,8 @@
 		</div>
 	</div>
 		
+
+	{{-- 
 		<div>
 			<p class="text-black-50 p-3">
 				..
@@ -216,6 +218,7 @@
 					</form>
 			</div>
 	</div>
+	--}}
 </section>
 
 

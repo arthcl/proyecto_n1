@@ -26,7 +26,7 @@ class AdministradorController extends Controller
    		 		'usuarios' => $usuarios,
    		 		'talleres' =>	Taller::all(),
    		 		'supervisores'	=> User::where('tipo_usuario_id', 2)->get(),
-   		 		'mecanicos'	=> User::where('tipo_usuario_id', 3)->get(),
+   		 		'administradores'	=> User::where('tipo_usuario_id', 1)->get(),
    		 		'clientes'	=> User::where('tipo_usuario_id', 4)->get(),
    		 		'vehiculos'	=> Vehiculo::all(),
 

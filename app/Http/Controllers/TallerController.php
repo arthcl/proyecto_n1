@@ -17,10 +17,12 @@ class TallerController extends Controller
     {
         $taller = Taller::all()->where('vigencia', 1);
 
+       $talleres = collect($taller);
 
        return view('taller.index', [
 
             'taller' => $taller,
+            'tipo_servicio' => $taller->tiposervicios->puck('descripcion'),
 
 
 

@@ -24,9 +24,10 @@ class ActividadController extends Controller
                
             'vigencia'          =>  'required',
            'orden_trabajo_id'   =>  'required',
-           'descripcion'       =>  'required',
+           'categoria_actividad_id'       =>  'required',
 
         ]));
+        /*
         foreach ($request->item as $key=>$item) {
           $data = new ItemYServicios();
           $data->actividad_id = $actividad->id;
@@ -38,10 +39,14 @@ class ActividadController extends Controller
           $data->total = $request->total[$key];
           $data->save();
         }
+        */
 
         return redirect()->back()->with('status', 'la actividad fue creada con exito');
 
 
+    
     }
+
+
     
 }

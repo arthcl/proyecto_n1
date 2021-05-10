@@ -27,9 +27,9 @@
     @php
         $suma = 0;
     @endphp
-      @forelse ($orden_trabajo->actividad as $actividad)
+      @forelse ($orden_trabajo->actividad->sortBy('categoria_actividad_id') as $actividad)
           <li class="list-group-item list-group-item-primary">
-              <h6 class="my-0">{{$actividad->descripcion}}</h6>
+              <h6 class="my-0">{{$actividad->categoria_actividad->descripcion}}</h6>
                   @foreach ($actividad->items as $item)
                       <li class="list-group-item d-flex justify-content-between ">
                           <span>{{ $item->item }} </span>
@@ -58,6 +58,8 @@
 
 <!-- FORMULARIO INGRESO DE ITEMS ----------------------->
 <div class="mt-3 col-8">
+  @include('administrador.ot_sistema.actualizar_estado_actividad')
+  
   @include('administrador.ot_sistema.create_actividad')
 </div>
 @endsection

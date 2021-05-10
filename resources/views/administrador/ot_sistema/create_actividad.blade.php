@@ -5,24 +5,56 @@
                 <span class="text-muted">Ingresar </span>
             </h4>
         </div>
-        <div class="card-body">
+        <div class="card-body bg-info">
             <form class="form-inline" action="{{ route('actividad.store') }}" method="POST" accept-charset="utf-8">
                 @csrf
                 <input type="hidden" value="1" name="vigencia">
                 <input type="hidden" value="{{ $orden_trabajo->id }}" name="orden_trabajo_id">
+                <div class="col-5 mb-3">
+                    <label for="state">Actividad</label>
+                    <select class="custom-select w-100" name="categoria_actividad_id" required="">
+                    <option value="0">Seleccionar...</option>
+                    @foreach ($categoria_actividad as $ca)
+
+                    <option value="{{$ca->id}}">{{$ca->descripcion}}</option>
+                    @endforeach  
+                    {{-- 
+                    <option value="Descripcion y/o requerimiento">Descripcion y/o requerimiento</option>
+                    <option value="Descripcion trabajos realizados">Descripcion trabajos realizados</option>
+                    <option value="Observaciones y/o diagnostico">Observaciones y/o diagnostico</option>
+                    <option value="Repuestos">Repuestos</option>
+                    <option value="Fluidos">Fluidos</option>
+                    <option value="Insumos">Insumos</option>
+                    --}}
+                    </select>
+                </div>
+
+                    <button class="btn btn-primary align-items-center" type="submit">
+                        <i class="far fa-save px-2"></i>
+                        Ingresar
+                    </button>
+            </form>
+
+        </div>
+        <div class="card-body">
+            <form class="form-inline" action="{{ route('item_servicio.store') }}" method="POST" accept-charset="utf-8">
+                @csrf
+                @include('errors.formErrors')
+
+                <input type="hidden" value="1" name="vigencia">
+                <input type="hidden" value="{{ $orden_trabajo->id }}" name="orden_trabajo_id">
+
+
 
                     <div class="col-5 mb-3">
-                      <label for="state">Actividad</label>
-                      <select class="custom-select w-100" name="descripcion" required="">
-                        <option value="0">Seleccionar...</option>
-                        <option value="Descripcion y/o requerimiento">Descripcion y/o requerimiento</option>
-                        <option value="Descripcion trabajos realizados">Descripcion trabajos realizados</option>
-                        <option value="Observaciones y/o diagnostico">Observaciones y/o diagnostico</option>
-                        <option value="Repuestos">Repuestos</option>
-                        <option value="Fluidos">Fluidos</option>
-                        <option value="Insumos">Insumos</option>
-                      </select>
-                    </div>
+                        <label for="state">Actividades asignadas</label>
+                        <select class="custom-select w-100" name="actividad_id" required="">
+                            <option value="0">Seleccionar...</option>
+                            @foreach ($orden_trabajo->actividad as $ac)
+                            <option value="{{$ac->categoria_actividad->id}}">{{$ac->categoria_actividad->descripcion}}</option>
+                            @endforeach                        
+                        </select>
+                      </div>
                 
                 <div class="table-responsive">
                     <table class="table table-hover ">

@@ -107,8 +107,8 @@
 						<!-- small box -->
 						<div class="small-box bg-secondary">
 							<div class="inner">
-								<h3>{{ $mecanicos->count() }}</h3>
-								<p>Mecánicos</p>
+								<h3>{{ $administradores->count() }}</h3>
+								<p>Administradores</p>
 							</div>
 							<div class="icon">
 								<i class="ion ion-stats-bars"></i>

@@ -83,6 +83,9 @@
                   {{  $vehiculo->created_at->diffForHumans() ?? '-'  }}
                 </small>
               </div>
+
+
+              {{-- 
               <div class="d-flex justify-content-center align-items-center py-2">
                 <a class="btn btn-outline-primary" 
                   href="{{ route('usuario.show', $vehiculo->cliente )}}" 
@@ -116,7 +119,7 @@
                   @method('DELETE')
                 </form>
               </div>
-            
+            --}}
           </div>           
         </div>
       </div>

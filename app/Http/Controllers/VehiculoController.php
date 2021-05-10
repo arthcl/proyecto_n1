@@ -39,7 +39,7 @@ class VehiculoController extends Controller
 
         return view('vehiculo.create', [
 
-            'cliente'       => User::where('tipo_usuario_id','4')->get(),
+            'cliente'       => User::where('tipo_usuario_id', 3)->get(),
             't_vehiculo'    => TipoVehiculo::all(),
             't_motor'       => TipoMotor::all(),
             'ma_vehiculo'   => MarcaVehiculo::all(),
