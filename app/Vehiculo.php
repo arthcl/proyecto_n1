@@ -14,10 +14,11 @@ class Vehiculo extends Model
     // para guardar en distinto formato en la base de datos
     //protected $dateFormat = 'd/m/y';
 
-
+/*
     public function getRouteKeyName(){
     	return 'patente';
     }
+    */
 
 
     public function cliente()

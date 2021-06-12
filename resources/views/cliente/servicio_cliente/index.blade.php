@@ -113,7 +113,7 @@
    <tbody>
    @forelse($servicio_finalizado as $finalizado)
     <tr>
-     <th scope="row">{{ $finalizado->updated_at }}</th>
+     <th scope="row">{{ $finalizado->updated_at->format('d-m-Y h:m') }}</th>
      <td>{{ $finalizado->vehiculo->patente}}</td>
      <td>{{ $finalizado->tipo_servicio->descripcion }}</td>
      <td>{{ $finalizado->taller->descripcion }}</td>

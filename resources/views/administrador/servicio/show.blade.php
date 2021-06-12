@@ -149,7 +149,7 @@
 					<td >{{ $servicio->taller->descripcion }}</td>
 					<td >{{ $servicio->tipo_servicio->descripcion }}</td>
 					<td >{{ $servicio->observacion }}</td>
-					<td>{{ $servicio->taller->descripcion }}</td>
+					<td>{{ $servicio->updated_at->format('d-m-Y H:m') }}</td>
 
 				</tr>
 			</tbody>

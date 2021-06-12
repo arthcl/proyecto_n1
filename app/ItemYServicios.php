@@ -11,9 +11,11 @@ class ItemYServicios extends Model
 	 protected $guarded = [];//realiza lo contrario que fillable, se mencionan los campos que no se requiere asignar masivamente
 	 protected $table = 'item_y_servicios';
 
+	 /*
 	 public function getRouteKeyName(){
     	return 'item';
     }
+	*/
 
 	public function actividad()
 	{

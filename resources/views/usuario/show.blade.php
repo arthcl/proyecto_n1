@@ -175,56 +175,35 @@
 					</div>
 
 				</div>
-					
-				<!-- TIPO CLIENTE PARTICULAR -->
-				<div id="cliente_particular">
-					<h1></h1>	
+				<div>
+					<p class="text-black-50 p-3">
+						{{  $usuario->created_at->diffForHumans() ?? '-'  }}
+					</p>
 				</div>
-				<hr class="my-4 text-dark">
-				<!-- TIPO CLIENTE EMPRESA -->
-				<div id="cliente_empresa">
+					<div class="d-flex justify-content-center align-items-center">
+						<a class="btn btn-outline-primary" 
+							href="{{ route('usuario.index') }}" 
+							title="">
+							<i class="fas fa-undo"></i>
+						</a>
 
-					<h1></h1>
-				</div>
-			</div>
-		</div>
-	</div>
-		
-		<div>
-			<p class="text-black-50 p-3">
-				{{  $usuario->created_at->diffForHumans() ?? '-'  }}
-			</p>
-		</div>
-			<div class="d-flex justify-content-center align-items-center">
-				<a class="btn btn-outline-primary" 
-					href="{{ route('usuario.index') }}" 
-					title="">
-					<i class="fas fa-undo"></i>
-				</a>
-
-						<a 
-							class="btn btn-primary btn-group-sm"
+						<a class="btn btn-primary" 
 							href="{{ route('usuario.edit', $usuario) }}" 
 							title="">
-							<i class="fas fa-user-edit"></i>
+							<i class="fas fa-edit"></i>
 						</a>
-						<a 
-							class="btn btn-danger"
-							href="#"
-							onclick="document.getElementById('delete-usuario').submit()" 
-							title="">
-							<i class="fas fa-trash"></i>   
-						</a>
-					<form 
-						class="d-none" 
-						id="delete-usuario" 
-						action="{{ route('usuario.destroy', $usuario) }}" 
-						method="POST" 
-						accept-charset="utf-8">
-						@csrf
-						@method('DELETE')
-					</form>
+		
+					</div>
+					
 			</div>
+		</div>
+
+
+
+
+	</div>
+		
+
 	</div>
 </section>
 

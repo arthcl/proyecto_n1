@@ -1,23 +1,22 @@
 
   
-    <nav class="navbar navbar-expand-lg shadow d-flex justify-content-between">
-		<div class="container">
-			<a class="navbar-brand" href="{{ route('home') }}">
-			    <div class="caja-logo-header">
-			        <img src="img/logo-blanco.png" alt="logo">
-			    </div>
-			</a>
-		
-            <button class="navbar-toggler hamburguesa" type="button" 
-                data-toggle="collapse" 
-                data-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" 
-				aria-label="{{__('Toggle navigation')}}">
-            <span class="navbar-toggler-icon">
-             <img src="img/menu.png" alt="menu" class="img-responsive lineas">
-            </span>
-            </button>
-
+<nav class="navbar navbar-expand-lg shadow d-flex justify-content-between">
+    <div class="container">
+        <a class="navbar-brand" href="{{ route('home') }}">
+            <div class="caja-logo-header">
+                <img src="img/logo-blanco.png" alt="logo">
+            </div>
+        </a>
+    
+        <button class="navbar-toggler hamburguesa" type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-label="{{__('Toggle navigation')}}">
+        <span class="navbar-toggler-icon">
+            <img src="img/menu.png" alt="menu" class="img-responsive lineas">
+        </span>
+        </button>
 
 
         <div class="collapse navbar-collapse menu" id="navbarSupportedContent">		
@@ -102,7 +101,7 @@
                 @endguest
             </ul>	
         </div>
-	</div>
+    </div>
 </nav>  
   
 

@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Taller extends Model
 {
+    /*
     public function getRouteKeyName(){
         return 'descripcion';
     }
-
+*/
     protected $table = 'taller';
     // protected $fillable = ['descripcion'];
 	protected $guarded = [];

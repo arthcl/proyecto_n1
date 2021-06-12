@@ -12,9 +12,11 @@ class Servicio extends Model
 	 protected $guarded = [];//realiza lo contrario que fillable, se mencionan los campos que no se requiere asignar masivamente
 	 protected $table = 'servicio';
 
+    /*
     public function getRouteKeyName(){
     	return 'observacion';
     }
+    */
 
    public function vehiculo()
    {

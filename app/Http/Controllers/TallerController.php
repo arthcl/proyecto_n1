@@ -22,7 +22,6 @@ class TallerController extends Controller
        return view('taller.index', [
 
             'taller' => $taller,
-            'tipo_servicio' => $taller->tiposervicios->puck('descripcion'),
 
 
 

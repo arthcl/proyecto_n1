@@ -17,8 +17,9 @@
             <div class="caja-slide1 container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <h2 class="animate__animated animate__fadeInDown">TODOS LOS CUIDADOS PARA TU AUTO A SOLO  UNOS CLICKS</h2>
-                        <p class="animate__animated animate__fadeInDown">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci. </p>
+                        <h2 class="animate__animated animate__fadeInDown text-uppercase "> mantención en terreno de vehiculos menores, camiones y maquinaria</h2>
+                        <p class="animate__animated animate__fadeInDown">Contamos con equipo de diagnostico de tipo electrónico, hidráulico, neumático y eléctrico para atender variados equipos en terreno. Permitiendonos identificar y reparar fallas en terreno.
+                        </p>
                         <a href="#" class="b-app">Contáctanos</a>
                     </div>
                 </div>
@@ -27,9 +28,9 @@
           <div class="carousel-item slide2 ">
             <div class="caja-slide2 container">
                 <div class="row">
-                    <div class="caja1 col-lg-6 col-md-6 col-sm-6 col-xs-6 order-last">
-                        <h2 class="">LO VAMOS A BUSCAR Y LO REGRESAMOS A LA PUERTA DE TU CASA</h2>
-                        <P class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci. </P>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 order-last">
+                        <h2 class="text-uppercase">plataforma de monitoreo web de servicios<h2>
+                        <P class="">nuestro sistema le brindara la posibilidad de visualizar el estado de su vehículo, como tambien servicios y trabajos asociados </P>
                         <a href="#" class="b-app">Contáctanos</a>
                     </div>
                     <div class="caja2 col-lg-6 col-md-6 col-sm-6 col-xs-6 order-first">
@@ -42,9 +43,9 @@
             <div class="caja-slide3 container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-6 col-xs-6">
-                       <h4>20% DE DESCUENTO</h4>
-                        <h2>EN TU SEGUNDA MANTENCION</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci. </p>
+                       <h4 class="text-uppercase">10% de descuento</h4>
+                        <h2 class="text-uppercase">en tu primera mantención</h2>
+                        <p>contáctanos y obten tu descuento en la primera manteción con nuestros talleres asociados</p>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-6 col-xs-6">
                         

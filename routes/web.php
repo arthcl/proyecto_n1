@@ -19,6 +19,8 @@ Auth::routes(['register' => true] );
 Route::view('/', 'home')->name('home');
 Route::view('/quienes-somos', 'about')->name('about');
 Route::view('/contacto', 'contact')->name('contact');
+
+
 Route::post('/contacto', 'MessageController@store')->name('messages.store');
 
 

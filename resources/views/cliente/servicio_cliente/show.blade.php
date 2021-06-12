@@ -105,15 +105,17 @@
                 <h6 class="my-0">{{$item_ot->descripcion}}</h6>
                    @foreach ($item_ot->actividad as $item_actividad)
                         <li class="list-group-item d-flex justify-content-between ">
-                            <strong>{{ $item_actividad->descripcion }}</strong>
-                            <strong>$ {{ number_format($item_actividad->items->sum('total'), 2)}}</strong>
-
+							
+								<strong>{{ $item_actividad->categoria_actividad->descripcion}}</strong>
+								<strong>$ {{ number_format($item_actividad->items->sum('total'), 2)}}</strong>
+              
                               @foreach ($item_actividad->items as $item) 
 							  @php
 							  $suma+=$item->total;   //se soman los totales de cada ot
 							  @endphp 
                               <li class="list-group-item text-muted d-flex justify-content-between ">
-                                <span>{{$item->item }}</span>
+                                <span>{{$item->item }} / x{{$item->cantidad}}</span>
+								<span>{{$item->total }}</span>
 
                               </li>
                             @endforeach 

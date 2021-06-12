@@ -18,8 +18,7 @@
 <!--------------------------------->
 @section('content')
            <section class="col-lg-3 text-center connectedSortable">
-			<h2 class="display-5">Actualizar</h2>
-			<p class="lead text-secondary">Actualizar usuario</p>
+
 			@include('partials.session-status')
 			@include('errors.formErrors')
 			<form 
@@ -58,10 +57,10 @@
 				<div class="form-group">
 						<input
 							class="form-control bg-light shadow-sm border-0"
-							placeholder="password"
-							type="text" 
+							placeholder="contraseña"
+							type="password" 
 							name="password" 
-							value="{{old('password', $usuario->password )}}">
+							value="">
 				</div>
 				<button
 					class="btn btn-primary btn-large btn-block" 

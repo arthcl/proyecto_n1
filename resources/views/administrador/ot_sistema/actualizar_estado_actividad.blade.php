@@ -4,17 +4,6 @@
     </div>
 
 
-    <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="customSwitch1">
-        <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
-      </div>
-      <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
-        <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
-      </div>
-
-
-
     <div class=" card-body">
         <form class="form-inline" action="{{ route('orden_trabajo.update', $orden_trabajo) }}" method="POST" accept-charset="utf-8">
             @method('PATCH')

@@ -2,10 +2,11 @@
 
 namespace App;
 
+use Spatie\Permission\Traits\HasRoles;
+use App\Notifications\UserResetPassword;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Spatie\Permission\Traits\HasRoles;
 
 
 class User extends Authenticatable
@@ -15,13 +16,16 @@ class User extends Authenticatable
     //use HasRoles;
 
 
+    /*
     public function getRouteKeyName(){
         return 'nombre';
     }
-
+*/
     protected $guarded = [];
     // para guardar en distinto formato en la base de datos
     //protected $dateFormat = 'd/m/y';
+
+
 
     protected $hidden = [
         'password', 'remember_token',

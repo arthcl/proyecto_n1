@@ -85,36 +85,13 @@
               </div>
               <div class="d-flex justify-content-center align-items-center py-2">
                 <a class="btn btn-outline-primary" 
-                  href="{{ route('usuario.show', $vehiculo->cliente )}}" 
+                  href="{{ url('vehiculo_cliente')}}" 
                   title="">
 
                   <i class="fas fa-undo"></i>
                   volver
                 </a>
 
-                <a 
-                  class="btn btn-primary btn-group-sm"
-                  href="{{ route('vehiculo.edit', $vehiculo->id) }}" 
-                  title="">
-                  <i class="fas fa-user-edit"></i>
-                </a>
-                <a 
-                  class="btn btn-danger"
-                  href="#"
-                  onclick="document.getElementById('delete-vehiculo').submit()" 
-                  title="">
-                  <i class="fas fa-trash"></i>   
-                </a>
-              
-                <form 
-                  class="d-none" 
-                  id="delete-vehiculo" 
-                  action="{{ route('vehiculo.destroy', $vehiculo->id) }}" 
-                  method="POST" 
-                  accept-charset="utf-8">
-                  @csrf
-                  @method('DELETE')
-                </form>
               </div>
             
           </div>           

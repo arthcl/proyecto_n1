@@ -178,47 +178,19 @@
 				
 			</div>
 		</div>
-	</div>
-		
+		<div class="d-flex justify-content-center align-items-center">
+			<a class="btn btn-outline-primary btn-block" 
+				href="{{ route('taller.index') }}" 
+				title="">
+				<i class="fas fa-undo"></i>
+			</a>
 
-	{{-- 
-		<div>
-			<p class="text-black-50 p-3">
-				..
-			</p>
 		</div>
-			<div class="d-flex justify-content-center align-items-center">
-				<a class="btn btn-outline-primary" 
-					href="{{ route('taller.index') }}" 
-					title="">
-					<i class="fas fa-undo"></i>
-				</a>
-
-						<a 
-							class="btn btn-primary btn-group-sm"
-							href="{{ route('usuario.edit', $taller) }}" 
-							title="">
-							<i class="fas fa-user-edit"></i>
-						</a>
-						<a 
-							class="btn btn-danger"
-							href="#"
-							onclick="document.getElementById('delete-usuario').submit()" 
-							title="">
-							<i class="fas fa-trash"></i>   
-						</a>
-					<form 
-						class="d-none" 
-						id="delete-usuario" 
-						action="{{ route('usuario.destroy', $taller) }}" 
-						method="POST" 
-						accept-charset="utf-8">
-						@csrf
-						@method('DELETE')
-					</form>
-			</div>
 	</div>
-	--}}
+
+
+	</div>
+
 </section>
 
 

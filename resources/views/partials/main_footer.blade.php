@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row d-flex justify-content-between">
         <div class="col-lg-4 caja-logo-footer">
             <img src="img/logo-blanco.png" alt="Logo">
         </div>
@@ -22,6 +22,7 @@
                 </div>
             </div>
         </div>
+        {{--
         <div class="col-lg-4 col-md-12 col-sm-4 col-xs-12  footer-rrss">
             <h4>SÍGUENOS</h4>
             <div class="row">
@@ -35,5 +36,6 @@
                 </div>
             </div>
         </div>
+         --}}
     </div>
 </div>

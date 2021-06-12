@@ -18,14 +18,7 @@
 
                     <option value="{{$ca->id}}">{{$ca->descripcion}}</option>
                     @endforeach  
-                    {{-- 
-                    <option value="Descripcion y/o requerimiento">Descripcion y/o requerimiento</option>
-                    <option value="Descripcion trabajos realizados">Descripcion trabajos realizados</option>
-                    <option value="Observaciones y/o diagnostico">Observaciones y/o diagnostico</option>
-                    <option value="Repuestos">Repuestos</option>
-                    <option value="Fluidos">Fluidos</option>
-                    <option value="Insumos">Insumos</option>
-                    --}}
+
                     </select>
                 </div>
 
@@ -51,7 +44,7 @@
                         <select class="custom-select w-100" name="actividad_id" required="">
                             <option value="0">Seleccionar...</option>
                             @foreach ($orden_trabajo->actividad as $ac)
-                            <option value="{{$ac->categoria_actividad->id}}">{{$ac->categoria_actividad->descripcion}}</option>
+                            <option value="{{$ac->id}}">{{$ac->categoria_actividad->descripcion}}</option>
                             @endforeach                        
                         </select>
                       </div>
