@@ -50,7 +50,12 @@ Route::middleware(['auth', 'check.admin'])->group(function(){
 	//itemservicio
 	Route::resource('item_servicio', 'ItemYServiciosController')->names('item_servicio');
 
+	//Marcas y modelos
 
+	Route::get('marca_modelo', 'MarcaModeloController@index')->name('marca_modelo');
+
+	Route::resource('marca', 'MarcaController')->names('marca');
+	Route::resource('modelo', 'ModeloController')->names('modelo');
 });
 	
 

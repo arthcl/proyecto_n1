@@ -29,7 +29,7 @@
 							<div class="icon">
 								<i class="ion ion-bag"></i>
 							</div>
-							<a href="#" class="small-box-footer">Acceder <i class="fas fa-arrow-circle-right"></i></a>
+							<a href="servicio_cliente" class="small-box-footer">Acceder <i class="fas fa-arrow-circle-right"></i></a>
 						</div>
 					</div>
 					<!-- ./col -->
@@ -43,7 +43,7 @@
 							<div class="icon">
 								<i class="ion ion-stats-bars"></i>
 							</div>
-							<a href="#" class="small-box-footer">Acceder <i class="fas fa-arrow-circle-right"></i></a>
+							<a href="servicio_cliente" class="small-box-footer">Acceder <i class="fas fa-arrow-circle-right"></i></a>
 						</div>
 					</div>
 					<!-- ./col -->
@@ -57,7 +57,7 @@
 							<div class="icon">
 								<i class="ion ion-stats-bars"></i>
 							</div>
-							<a href="#" class="small-box-footer">Acceder <i class="fas fa-arrow-circle-right"></i></a>
+							<a href="servicio_cliente" class="small-box-footer">Acceder <i class="fas fa-arrow-circle-right"></i></a>
 						</div>
 					</div>
 					<!-- ./col -->

@@ -65,17 +65,26 @@
              <div class="col-lg-4 espacio">
                  <h3 class="text-center">Valor</h3>
                  <div class="barra-valores"></div>
-                 <p class="color">Somos un taller integral que nos dedicamos a entregar soluciones  de reparación mecánica enfocándonos en la importancia que tienen los vehículos para nuestros clientes, ya sea en su uso particular, de trabajo o venta.</p>
+                 <ul class="color text-left">
+                     <li>Responsabilidad</li>
+                     <li>compromiso</li>
+                     <li>seriedad</li>
+                     <li>transparencia</li>
+                     <li>seguridad</li>
+                     <li>pasión</li>
+                     <li>dedicación</li>
+                 </ul>
+                 <p class="color">Es lo que nos mueve y nos proyecta avanzar</p>
              </div>
              <div class="col-lg-4 espacio separar">
                  <h3 class="text-center">Misión</h3>
                  <div class="barra-valores"></div>
-                 <p class="color">Somos un taller integral que nos dedicamos a entregar soluciones  de reparación mecánica enfocándonos en la importancia que tienen los vehículos para nuestros clientes, ya sea en su uso particular, de trabajo o venta.</p>
+                 <p class="color">Ser reconocidos como un socio de confianza para la administración de la mantención de vehículos de nuestros clientes entregando un servicio de calidad y en constante mejora tecnologica.</p>
              </div>
              <div class="col-lg-4 espacio separar">
                  <h3 class="text-center">Visión</h3>
                  <div class="barra-valores"></div>
-                 <p class="color">Somos un taller integral que nos dedicamos a entregar soluciones  de reparación mecánica enfocándonos en la importancia que tienen los vehículos para nuestros clientes, ya sea en su uso particular, de trabajo o venta.</p>
+                 <p class="color">Llegar a ser una red nacional de servicios de mantención para que en cada lugar exista un cliente satisfecho con nuestro servicio.</p>
              </div>
          </div>
      </div>

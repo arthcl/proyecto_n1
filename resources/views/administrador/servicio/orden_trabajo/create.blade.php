@@ -17,31 +17,37 @@
 						<label for="fecha_inicio">Fecha de inicio</label>
 						<input type="date" class="form-control" name="fecha_inicio" placeholder="Ingresar fecha de inicio" required>
 						<div class="valid-feedback">
-						  Ingreso correcto!
+						  <!--Ingreso correcto! -->
 						</div>
-					  </div>
+						<div class="invalid-feedback">
+							Favor ingresar fecha de inicio.
+						</div>
+					</div>
 
 					  <div class="col-md-6 mb-3">
 						<label for="fecha_termino">Fecha de termino</label>
 						<input type="date" class="form-control" name="fecha_termino" placeholder="Ingresar fecha de inicio" required>
 						<div class="valid-feedback">
-						  Ingreso correcto!
+						  <!--Ingreso correcto! -->
 						</div>
+						<div class="invalid-feedback">
+							Favor ingresar fecha de termino.
+						  </div>
 					  </div>
 
 					  <div class="col-md-6 mb-3">
 						<label for="color_original">Color original</label>
-						<input type="text" class="form-control" name="color_original" placeholder="Ingresar color original" required>
+						<input type="text" class="form-control" name="color_original" placeholder="Ingresar color original">
 						<div class="valid-feedback">
-						  Ingreso correcto!
+						  <!--Ingreso correcto! -->
 						</div>
 					  </div>
 
 					  <div class="col-md-6 mb-3">
 						<label for="color_aplicar">Color al finalizar</label>
-						<input type="text" class="form-control" name="color_aplicar" placeholder="Ingresar color con el que finalizara" required>
+						<input type="text" class="form-control" name="color_aplicar" placeholder="Ingresar color con el que finalizara" >
 						<div class="valid-feedback">
-						  Ingreso correcto!
+						  <!--Ingreso correcto! -->
 						</div>
 					  </div>
 
@@ -49,7 +55,7 @@
 						<label for="numero_cotizacion">Nº Cotización</label>
 						<input type="text" class="form-control" name="numero_cotizacion" placeholder="Ingresar número de cotización si posee" >
 						<div class="valid-feedback">
-						  Ingreso correcto!
+						  <!--Ingreso correcto! -->
 						</div>
 					  </div>
 
@@ -57,7 +63,7 @@
 						<label for="orden_compra">Orden de compra</label>
 						<input type="text" class="form-control" name="orden_compra" placeholder="Ingresar orden de compra si posee" >
 						<div class="valid-feedback">
-						  Ingreso correcto!
+						  <!--Ingreso correcto! -->
 						</div>
 					  </div>
 

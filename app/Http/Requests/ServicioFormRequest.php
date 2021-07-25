@@ -13,7 +13,8 @@ class ServicioFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->isAdmin();
+        return $this->user()->isAdmin() || $this->user()->isSupervisor();
+
     }
 
     /**
@@ -30,7 +31,7 @@ class ServicioFormRequest extends FormRequest
             'vehiculo_id'           =>  'required',
             'tipo_servicio_id'      =>  'required',
             'taller_id'             =>  'required',
-            'observacion'           =>  'required',
+            'observacion'           =>  'required | string|max:50',
         ];
     }
 }

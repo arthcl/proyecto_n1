@@ -9,7 +9,7 @@ class CategoriaActividadFormRequest extends FormRequest
 
     public function authorize()
     {
-        return false;
+        return $this->user()->isAdmin() || $this->user()->isSupervisor();
     }
 
     public function rules()

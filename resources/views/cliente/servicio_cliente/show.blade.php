@@ -111,7 +111,7 @@
               
                               @foreach ($item_actividad->items as $item) 
 							  @php
-							  $suma+=$item->total;   //se soman los totales de cada ot
+							  $suma+=$item->total;   //se suman los totales de cada ot
 							  @endphp 
                               <li class="list-group-item text-muted d-flex justify-content-between ">
                                 <span>{{$item->item }} / x{{$item->cantidad}}</span>
@@ -134,9 +134,6 @@
        		@empty
             <h6 class="my-0">Sin orden de trabajo registrada</h6>
         	@endforelse 
-
-
-
 
     </ul>
   </div>

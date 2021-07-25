@@ -10,7 +10,7 @@
                     <img src="img/email.png" alt="correo">
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-10 col-10">
-                    <p class="email">emg@gmail.com</p>
+                    <p class="email">emgingenieriayservicios@gmail.com</p>
                 </div>
             </div>
             <div class="row telefono">
@@ -18,7 +18,7 @@
                     <img src="img/phone-call.png" alt="fono">
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-10 col-10">
-                    <p class="fono">+56 9 4235 4236</p>
+                    <p class="fono">+56 9 83632696</p>
                 </div>
             </div>
         </div>

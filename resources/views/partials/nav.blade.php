@@ -8,7 +8,7 @@
             </div>
         </a>
     
-        <button class="navbar-toggler hamburguesa" type="button" 
+        <button class="navbar-toggler hamburguesa bg-white" type="button" 
             data-toggle="collapse" 
             data-target="#navbarSupportedContent" 
             aria-controls="navbarSupportedContent" 
@@ -19,7 +19,7 @@
         </button>
 
 
-        <div class="collapse navbar-collapse menu" id="navbarSupportedContent">		
+        <div class="collapse navbar-collapse container-fluid" id="navbarSupportedContent">		
             <ul class="nav nav-pills ml-auto">
                 <li class=" nav-item">
                     <a class="nav-link sub" href="{{ route('home') }}" title=""> 

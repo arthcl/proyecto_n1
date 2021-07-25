@@ -63,22 +63,22 @@ $(function(){
 function onSelectTipoServicioChange()
 {
 	var tipo_servicio_id = $(this).val();
-	$('#select_taller').html('<option value="">Seleccionar...</option>');
+	$('#select_taller').html('<option selected disabled value="">Seleccionar...</option>');
 	
 	if(!tipo_servicio_id)
 	{
-		$('#select_taller').html('<option value="">Seleccionar...</option>');
+		$('#select_taller').html('<option selected disabled value="">Seleccionar...</option>');
 		return;
 	}
 
 	//ajax
 	$.get('/api/tipo_servicio/'+tipo_servicio_id+'/taller', function (data){
-		var html_select = '<option value="">Seleccionar...</option>';
+		var html_select = '<option selected disabled value="">Seleccionar...</option>';
 		for (var i=0; i<data.length; ++i)
 		{
 			if(data.length == 0)
 			{
-				html_select = '<option value="">Sin Registro</option>';
+				html_select = '<option selected disabled value="">Sin Registro</option>';
 				
 			}
 			else

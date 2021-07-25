@@ -13,7 +13,8 @@ class UserFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return $this->user()->isAdmin();
+
     }
 
     /**

@@ -22,21 +22,42 @@ USE `emg_bd`;
 -- Table structure for table `actividad`
 --
 
+
+
 CREATE TABLE `actividad` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `vigencia` int(11) DEFAULT NULL,
-  `orden_trabajo_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `categoria_actividad_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `orden_trabajo_id` bigint(20) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categoria_actividad`
+--
+
+CREATE TABLE `categoria_actividad` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `vigencia` int(11) DEFAULT NULL,
   `descripcion` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `actividad`
+-- Dumping data for table `categoria_actividad`
 --
 
-INSERT INTO `actividad` (`id`, `vigencia`, `orden_trabajo_id`, `descripcion`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'Descripcion y/o requerimiento', '2021-03-29 00:18:55', '2021-03-29 00:18:55');
+INSERT INTO `categoria_actividad` (`id`, `vigencia`, `descripcion`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Descripcion y/o requerimiento', NULL, NULL),
+(2, 1, 'Descripcion trabajos realizados', NULL, NULL),
+(3, 1, 'Observaciones y/o diagnostico', NULL, NULL),
+(4, 1, 'Repuestos', NULL, NULL),
+(5, 1, 'Fluidos', NULL, NULL),
+(6, 1, 'Insumos', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -417,6 +438,14 @@ CREATE TABLE `estado_orden_trabajo` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `estado_orden_trabajo`
+--
+
+INSERT INTO `estado_orden_trabajo` (`id`, `vigencia`, `descripcion`, `created_at`, `updated_at`) VALUES
+(1, 1, 'iniciando', NULL, NULL),
+(2, 1, 'finalizado', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -514,21 +543,15 @@ CREATE TABLE `item_y_servicios` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `vigencia` int(11) DEFAULT NULL,
   `actividad_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `item` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `orden_trabajo_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `item` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `unidad` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cantidad` int(11) NOT NULL,
-  `valor` double(8,2) NOT NULL,
-  `total` double(8,2) NOT NULL,
+  `valor` double(10,2) NOT NULL,
+  `total` double(10,2) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `item_y_servicios`
---
-
-INSERT INTO `item_y_servicios` (`id`, `vigencia`, `actividad_id`, `item`, `unidad`, `cantidad`, `valor`, `total`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'ruido en rueda', 'un', 1, 1000.00, 1000.00, '2021-03-29 00:19:43', '2021-03-29 00:19:43');
 
 -- --------------------------------------------------------
 
@@ -622,7 +645,10 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2021_04_03_170052_create_permission_tables', 1);
+(1, '2021_04_03_170052_create_permission_tables', 1),
+(2, '2014_10_12_000000_create_users_table', 2),
+(3, '2014_10_12_100000_create_password_resets_table', 2),
+(4, '2021_06_29_234938_add_patente_to_table_vehiculo', 3);
 
 -- --------------------------------------------------------
 
@@ -4097,30 +4123,6 @@ INSERT INTO `modelo_vehiculo` (`id`, `vigencia`, `marca_vehiculo_id`, `descripci
 -- --------------------------------------------------------
 
 --
--- Table structure for table `model_has_permissions`
---
-
-CREATE TABLE `model_has_permissions` (
-  `permission_id` bigint(20) UNSIGNED NOT NULL,
-  `model_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `model_id` bigint(20) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `model_has_roles`
---
-
-CREATE TABLE `model_has_roles` (
-  `role_id` bigint(20) UNSIGNED NOT NULL,
-  `model_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `model_id` bigint(20) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `orden_trabajo`
 --
 
@@ -4128,27 +4130,36 @@ CREATE TABLE `orden_trabajo` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `vigencia` int(11) DEFAULT NULL,
   `servicio_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `km_actual` varchar(45) DEFAULT NULL,
-  `km_proximo` varchar(45) DEFAULT NULL,
-  `fecha_ingreso` date DEFAULT NULL,
-  `fecha_proxima_mantencion` date DEFAULT NULL,
+  `estado_orden_trabajo_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `fecha_inicio` date NOT NULL,
+  `fecha_termino` date NOT NULL,
+  `color_original` varchar(45) DEFAULT NULL,
+  `color_aplicar` varchar(45) DEFAULT NULL,
   `numero_cotizacion` int(11) DEFAULT NULL,
   `orden_compra` int(11) DEFAULT NULL,
-  `descripcion_ot` varchar(45) DEFAULT '',
+  `descripcion` varchar(45) NOT NULL DEFAULT '',
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `fecha_inicio` date DEFAULT NULL,
-  `fecha_termino` date DEFAULT NULL,
-  `color_original` varchar(45) DEFAULT NULL,
-  `color_aplicar` varchar(45) DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `orden_trabajo`
+-- Table structure for table `password_resets`
 --
 
-INSERT INTO `orden_trabajo` (`id`, `vigencia`, `servicio_id`, `km_actual`, `km_proximo`, `fecha_ingreso`, `fecha_proxima_mantencion`, `numero_cotizacion`, `orden_compra`, `descripcion_ot`, `created_at`, `updated_at`, `fecha_inicio`, `fecha_termino`, `color_original`, `color_aplicar`) VALUES
-(1, 1, 1, '3000', '10000', '2021-03-28', '2021-03-28', NULL, NULL, 'Diagnostico general', '2021-03-28 22:39:22', '2021-03-28 22:39:22', '2021-03-28', '2021-03-28', 'blanco', 'negro');
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('admin@emg.cl', '$2y$10$BzE1ranzG13RaOykkMusGum/WyN6Fe7Sgrh26KVcRfoKwvcol1kA6', '2021-06-13 03:13:57');
 
 -- --------------------------------------------------------
 
@@ -4292,40 +4303,30 @@ CREATE TABLE `roles` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `role_has_permissions`
---
-
-CREATE TABLE `role_has_permissions` (
-  `permission_id` bigint(20) UNSIGNED NOT NULL,
-  `role_id` bigint(20) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `servicio`
 --
 
 CREATE TABLE `servicio` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `vigencia` int(11) DEFAULT NULL,
-  `tipo_servicio_id` bigint(20) UNSIGNED NOT NULL,
+  `tipo_servicio_id` bigint(20) UNSIGNED DEFAULT NULL,
   `estado_servicio_id` bigint(20) UNSIGNED DEFAULT NULL,
   `vehiculo_id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `users_id` bigint(20) UNSIGNED DEFAULT NULL,
   `taller_id` bigint(20) UNSIGNED DEFAULT NULL,
   `observacion` varchar(45) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `km_actual` int(10) DEFAULT NULL,
+  `km_proximo` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `servicio`
 --
 
-INSERT INTO `servicio` (`id`, `vigencia`, `tipo_servicio_id`, `estado_servicio_id`, `vehiculo_id`, `user_id`, `taller_id`, `observacion`, `created_at`, `updated_at`) VALUES
-(1, 1, 3, 2, 13, 39, 27, 'diagnostico y reparacion', '2021-03-28 22:34:34', '2021-03-31 02:44:57'),
-(2, 1, 2, 3, 13, 39, 28, 'Pintura completa', '2021-03-29 01:18:50', '2021-03-29 01:19:24');
+INSERT INTO `servicio` (`id`, `vigencia`, `tipo_servicio_id`, `estado_servicio_id`, `vehiculo_id`, `users_id`, `taller_id`, `observacion`, `created_at`, `updated_at`, `km_actual`, `km_proximo`) VALUES
+(1, 1, 1, 1, 1, 78, 33, 'Requiere mecanica', '2021-07-05 01:32:47', '2021-07-05 01:32:47', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -4336,17 +4337,17 @@ INSERT INTO `servicio` (`id`, `vigencia`, `tipo_servicio_id`, `estado_servicio_i
 CREATE TABLE `taller` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `vigencia` int(11) NOT NULL,
-  `rut` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `rut` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `descripcion` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `razon_social` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `direccion` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comuna_id` bigint(20) UNSIGNED NOT NULL,
+  `razon_social` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT '',
+  `direccion` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT '',
+  `comuna_id` bigint(20) UNSIGNED DEFAULT NULL,
   `telefono_2` int(11) DEFAULT NULL,
   `telefono_1` int(11) DEFAULT NULL,
   `email` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `representante` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fecha_contrato` date NOT NULL,
-  `calificacion` int(11) NOT NULL,
+  `representante` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `fecha_contrato` date DEFAULT NULL,
+  `calificacion` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -4356,8 +4357,8 @@ CREATE TABLE `taller` (
 --
 
 INSERT INTO `taller` (`id`, `vigencia`, `rut`, `descripcion`, `razon_social`, `direccion`, `comuna_id`, `telefono_2`, `telefono_1`, `email`, `representante`, `fecha_contrato`, `calificacion`, `created_at`, `updated_at`) VALUES
-(27, 1, '18010015-6', 'Taller reparacion', 'taller reparacion ltda', 'balmace 135', 31, 975282426, 975282426, 'tm@tm.cl', 'muricio isla', '2021-03-28', 5, '2021-03-28 21:39:47', '2021-03-28 21:39:47'),
-(28, 1, '18010015-6', 'taller pintura', 'taller pintura ltda', 'prat 123', 30, 975282426, 975282426, 'tp@tp.cl', 'Mario Veloso', '2021-03-28', 3, '2021-03-29 01:18:26', '2021-03-29 01:18:26');
+(1, 0, '', 'no aplica', '', '', NULL, NULL, NULL, '', '', NULL, NULL, NULL, NULL),
+(33, 1, '18010015-6', 'taller mecanico', 'taller mecanico ltda', 'balmaceda 123', 30, 975282426, 975282426, 'tm@tm.cl', 'Carlos Astudillo', '2021-05-08', 5, '2021-05-08 23:24:29', '2021-05-08 23:24:29');
 
 -- --------------------------------------------------------
 
@@ -4449,8 +4450,7 @@ CREATE TABLE `tipo_servicio_taller` (
 --
 
 INSERT INTO `tipo_servicio_taller` (`id`, `vigencia`, `taller_id`, `tipo_servicio_id`, `created_at`, `updated_at`) VALUES
-(8, NULL, 27, 3, NULL, NULL),
-(9, NULL, 28, 2, NULL, NULL);
+(16, 1, 33, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -4473,7 +4473,7 @@ CREATE TABLE `tipo_usuario` (
 INSERT INTO `tipo_usuario` (`id`, `vigencia`, `descripcion`, `created_at`, `updated_at`) VALUES
 (1, '1', 'administrador', NULL, NULL),
 (2, '1', 'supervisor', NULL, NULL),
-(4, '1', 'cliente', NULL, NULL);
+(3, '1', 'cliente', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -4527,7 +4527,7 @@ INSERT INTO `tipo_vehiculo` (`id`, `vigencia`, `descripcion`, `created_at`, `upd
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `vigencia` int(11) DEFAULT NULL,
+  `vigencia` int(11) NOT NULL,
   `tipo_cliente_id` bigint(20) UNSIGNED DEFAULT NULL,
   `tipo_usuario_id` bigint(20) UNSIGNED DEFAULT NULL,
   `taller_id` bigint(20) UNSIGNED DEFAULT NULL,
@@ -4548,17 +4548,23 @@ CREATE TABLE `users` (
   `telefono_2` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `razon_social` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `razon_social` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `vigencia`, `tipo_cliente_id`, `tipo_usuario_id`, `taller_id`, `comuna_id`, `genero_id`, `rut`, `digito_verificador`, `giro_rubro`, `nombre`, `a_paterno`, `a_materno`, `f_nacimiento`, `email`, `password`, `direccion`, `numeracion`, `telefono_1`, `telefono_2`, `created_at`, `updated_at`, `razon_social`) VALUES
-(1, 1, NULL, 1, NULL, 3, NULL, NULL, NULL, NULL, 'Administrador', NULL, NULL, NULL, 'admin@emg.cl', '$2y$10$pNHU3D9tTaYdEl4R8RK7O.7BxYB12s1fDbzpuAFOHuEYTWBFwzc6i', NULL, NULL, NULL, NULL, '2020-08-03 00:43:19', '2020-08-03 00:43:19', NULL),
-(2, 1, NULL, 2, NULL, 1, NULL, NULL, NULL, NULL, 'Supervisor', NULL, NULL, NULL, 'supervisor@emg.cl', '$2y$10$0F2rHOhFVy2YHvgm6vax7urQQpsX4cj2QEI2CgyILVJsbUqDo2MQy', NULL, NULL, NULL, NULL, '2020-08-03 04:41:35', '2020-08-03 04:41:35', NULL),
-(39, 1, 2, 4, NULL, 30, 1, '18010015-6', NULL, NULL, 'alfonso', 'briones', 'cuevas', '2021-03-28', 'clientep@emg.cl', '$2y$10$cfjIARKUMv3LllHbNS6JWeTFt5mWNCgXSywFD23GkWa.lk8iUonMa', 'gg videla', 543, 975282426, 975282426, '2021-03-28 21:56:05', '2021-03-28 21:56:05', NULL);
+INSERT INTO `users` (`id`, `vigencia`, `tipo_cliente_id`, `tipo_usuario_id`, `taller_id`, `comuna_id`, `genero_id`, `rut`, `digito_verificador`, `giro_rubro`, `nombre`, `a_paterno`, `a_materno`, `f_nacimiento`, `email`, `password`, `direccion`, `numeracion`, `telefono_1`, `telefono_2`, `created_at`, `updated_at`, `razon_social`, `email_verified_at`, `remember_token`) VALUES
+(1, 1, NULL, 1, NULL, 3, NULL, NULL, NULL, NULL, 'Administrador', NULL, NULL, NULL, 'admin@emg.cl', '$2y$10$6ACNNiVkYuUjA9hrugP/bOFKp3n0pLyZTGMa1JsRqECuYJ4OE6dZ6', NULL, NULL, NULL, NULL, '2020-08-03 00:43:19', '2021-04-12 04:49:18', NULL, NULL, 'DhE8xf2L2WKmGQrVI30GXZwSxEnmc2B03JQLgQg23DAU3I9hqMn8Qbgx0N7I'),
+(2, 1, NULL, 2, NULL, 1, NULL, NULL, NULL, NULL, 'Supervisor', NULL, NULL, NULL, 'supervisor@emg.cl', '$2y$10$0o76qu85QynEs63VCzjCXObC06OK4Fe5FotN9HzWFYA5nTbDcUadO', NULL, NULL, NULL, NULL, '2020-08-03 04:41:35', '2021-04-25 22:58:25', NULL, NULL, 'wL2rXJgTF0uZVDCpVbPib4piHjYuxGUEjglhHlMr9Sh0lSDt6WRmb6sYaGMV'),
+(69, 1, 3, 1, NULL, 30, NULL, '18010015-6', NULL, NULL, 'arturo', NULL, NULL, NULL, 'admin2@emg.cl', '$2y$10$YAP/ludOZ1FQlAl7vsw2eOsHhC/rEVpBNKGUeFxVgfQ73YPMeQZeS', 'balmaceda', 2134, 975282426, 975282426, '2021-05-08 21:06:29', '2021-05-08 21:06:29', NULL, NULL, NULL),
+(70, 1, NULL, 1, NULL, 31, 1, '18010015-6', NULL, NULL, 'arturo', 'contreras', 'lamas', '2021-05-08', 'admin3@emg.cl', '$2y$10$mxIsvrMgcxYltkIw4l97XOwfPVeEWpyWA2CnSXMFTwNvASEBA3bli', 'balmaceda', 123, 975282426, 975282426, '2021-05-08 21:18:14', '2021-05-08 21:18:14', NULL, NULL, NULL),
+(73, 1, 3, 1, 1, 30, 1, '18010015-6', NULL, NULL, 'arturo', 'contreras', 'lamas', '2021-05-09', 'admin4@emg.cl', '$2y$10$Nm2Sx6xdG6PwAggKCXrCY.CfHGh8ff9lnOscEqD3IbxX59HoeCuoO', 'balmaceda', 1231, 975282426, 975282426, '2021-05-10 02:45:12', '2021-05-10 02:45:12', NULL, NULL, NULL),
+(74, 1, 3, 2, 33, 30, 1, '18010015-6', NULL, NULL, 'arturo', 'contreras', 'lamas', '2021-05-09', 'supervisor2@emg.cl', '$2y$10$Doev/SdCsM/3y4OJbBGYreQMTCXjKGfyzHOnYoWfE9KTc0pAnNUIS', 'balmaceda', 123123, 975282426, 975282426, '2021-05-10 02:51:00', '2021-05-10 02:51:00', NULL, NULL, NULL),
+(78, 1, 2, 3, 1, 30, 1, '18010015-6', NULL, NULL, 'arturo', 'contreras', 'lamas', '2021-05-09', 'clientep@emg.cl', '$2y$10$2/23QMkheEXEwH6CagFSEOY7H38tZd84.XedYQ/b1yHtoesp02HiO', 'balmaceda', 2342, 975282426, 975282426, '2021-05-10 03:28:14', '2021-05-10 03:28:14', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -4570,11 +4576,11 @@ CREATE TABLE `vehiculo` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `vigencia` int(11) DEFAULT NULL,
   `users_id` bigint(20) UNSIGNED NOT NULL,
+  `patente` varchar(10) NOT NULL DEFAULT '',
   `tipo_vehiculo_id` bigint(20) UNSIGNED DEFAULT NULL,
   `tipo_motor_id` bigint(20) UNSIGNED DEFAULT NULL,
   `marca_vehiculo_id` bigint(20) UNSIGNED DEFAULT NULL,
   `modelo_vehiculo_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `patente` varchar(10) NOT NULL,
   `revision_tecnica` datetime NOT NULL,
   `extintor` datetime NOT NULL,
   `permiso_circulacion` datetime NOT NULL,
@@ -4589,8 +4595,8 @@ CREATE TABLE `vehiculo` (
 -- Dumping data for table `vehiculo`
 --
 
-INSERT INTO `vehiculo` (`id`, `vigencia`, `users_id`, `tipo_vehiculo_id`, `tipo_motor_id`, `marca_vehiculo_id`, `modelo_vehiculo_id`, `patente`, `revision_tecnica`, `extintor`, `permiso_circulacion`, `horometro`, `ano_vehiculo`, `nomenclatura_neumatico`, `created_at`, `updated_at`) VALUES
-(13, 1, 39, 5, 1, 6, 116, 'FKGL-21', '2021-03-28 00:00:00', '2021-03-28 00:00:00', '2021-03-28 00:00:00', '7000', 2020, 'APRDAS12', '2021-03-28 22:06:32', '2021-03-28 22:06:32');
+INSERT INTO `vehiculo` (`id`, `vigencia`, `users_id`, `patente`, `tipo_vehiculo_id`, `tipo_motor_id`, `marca_vehiculo_id`, `modelo_vehiculo_id`, `revision_tecnica`, `extintor`, `permiso_circulacion`, `horometro`, `ano_vehiculo`, `nomenclatura_neumatico`, `created_at`, `updated_at`) VALUES
+(1, 1, 78, 'DRPH12', 2, 3, 2, 12, '2021-07-04 00:00:00', '2021-07-04 00:00:00', '2021-07-04 00:00:00', '10000', 2021, '250R16', '2021-07-05 01:32:13', '2021-07-05 01:32:13');
 
 --
 -- Indexes for dumped tables
@@ -4601,7 +4607,14 @@ INSERT INTO `vehiculo` (`id`, `vigencia`, `users_id`, `tipo_vehiculo_id`, `tipo_
 --
 ALTER TABLE `actividad`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fluido_orden_trabajo_id_foreign` (`orden_trabajo_id`);
+  ADD KEY `actividad_orden_trabajo_id_foreign` (`orden_trabajo_id`),
+  ADD KEY `actividad_categoria_actividad_id_foreign` (`categoria_actividad_id`);
+
+--
+-- Indexes for table `categoria_actividad`
+--
+ALTER TABLE `categoria_actividad`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `comuna`
@@ -4644,7 +4657,8 @@ ALTER TABLE `giro_rubro`
 --
 ALTER TABLE `item_y_servicios`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fluido_orden_trabajo_id_foreign` (`actividad_id`);
+  ADD KEY `fluido_orden_trabajo_id_foreign` (`actividad_id`),
+  ADD KEY `item_y_servicios_orden_trabajo_id_foreign` (`orden_trabajo_id`);
 
 --
 -- Indexes for table `marca_vehiculo`
@@ -4666,25 +4680,18 @@ ALTER TABLE `modelo_vehiculo`
   ADD KEY `modelo_vehiculo_marca_vehiculo_id_foreign` (`marca_vehiculo_id`);
 
 --
--- Indexes for table `model_has_permissions`
---
-ALTER TABLE `model_has_permissions`
-  ADD PRIMARY KEY (`permission_id`,`model_id`,`model_type`),
-  ADD KEY `model_has_permissions_model_id_model_type_index` (`model_id`,`model_type`);
-
---
--- Indexes for table `model_has_roles`
---
-ALTER TABLE `model_has_roles`
-  ADD PRIMARY KEY (`role_id`,`model_id`,`model_type`),
-  ADD KEY `model_has_roles_model_id_model_type_index` (`model_id`,`model_type`);
-
---
 -- Indexes for table `orden_trabajo`
 --
 ALTER TABLE `orden_trabajo`
   ADD PRIMARY KEY (`id`),
+  ADD KEY `orden_trabajo_estado_orden_trabajo_id_foreign` (`estado_orden_trabajo_id`),
   ADD KEY `orden_trabajo_servicio_id_foreign` (`servicio_id`);
+
+--
+-- Indexes for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD KEY `password_resets_email_index` (`email`);
 
 --
 -- Indexes for table `permissions`
@@ -4714,19 +4721,12 @@ ALTER TABLE `roles`
   ADD UNIQUE KEY `roles_name_guard_name_unique` (`name`,`guard_name`);
 
 --
--- Indexes for table `role_has_permissions`
---
-ALTER TABLE `role_has_permissions`
-  ADD PRIMARY KEY (`permission_id`,`role_id`),
-  ADD KEY `role_has_permissions_role_id_foreign` (`role_id`);
-
---
 -- Indexes for table `servicio`
 --
 ALTER TABLE `servicio`
   ADD PRIMARY KEY (`id`),
   ADD KEY `servicio_vehiculo_id_foreign` (`vehiculo_id`),
-  ADD KEY `servicio_users_id_foreign` (`user_id`),
+  ADD KEY `servicio_users_id_foreign` (`users_id`),
   ADD KEY `servicio_taller_id_foreign` (`taller_id`),
   ADD KEY `servicio_estado_servicio_id_foreign` (`estado_servicio_id`),
   ADD KEY `servicio_tipo_servicio_id_foreign` (`tipo_servicio_id`);
@@ -4793,6 +4793,7 @@ ALTER TABLE `users`
 --
 ALTER TABLE `vehiculo`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `vehiculo_patente_unique` (`patente`),
   ADD KEY `vehiculos_user_id_foreign` (`users_id`) USING BTREE,
   ADD KEY `vehiculo_tipo_vehiculo_id_foreign` (`tipo_vehiculo_id`),
   ADD KEY `vehiculo_tipo_motor_id_foreign` (`tipo_motor_id`),
@@ -4807,7 +4808,13 @@ ALTER TABLE `vehiculo`
 -- AUTO_INCREMENT for table `actividad`
 --
 ALTER TABLE `actividad`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `categoria_actividad`
+--
+ALTER TABLE `categoria_actividad`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `comuna`
@@ -4819,7 +4826,7 @@ ALTER TABLE `comuna`
 -- AUTO_INCREMENT for table `estado_orden_trabajo`
 --
 ALTER TABLE `estado_orden_trabajo`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `estado_servicio`
@@ -4849,7 +4856,7 @@ ALTER TABLE `giro_rubro`
 -- AUTO_INCREMENT for table `item_y_servicios`
 --
 ALTER TABLE `item_y_servicios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `marca_vehiculo`
@@ -4861,7 +4868,7 @@ ALTER TABLE `marca_vehiculo`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `modelo_vehiculo`
@@ -4873,7 +4880,7 @@ ALTER TABLE `modelo_vehiculo`
 -- AUTO_INCREMENT for table `orden_trabajo`
 --
 ALTER TABLE `orden_trabajo`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `permissions`
@@ -4903,13 +4910,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `servicio`
 --
 ALTER TABLE `servicio`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `taller`
 --
 ALTER TABLE `taller`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `tipo_cliente`
@@ -4933,13 +4940,13 @@ ALTER TABLE `tipo_servicio`
 -- AUTO_INCREMENT for table `tipo_servicio_taller`
 --
 ALTER TABLE `tipo_servicio_taller`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tipo_usuario`
 --
 ALTER TABLE `tipo_usuario`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tipo_vehiculo`
@@ -4951,17 +4958,31 @@ ALTER TABLE `tipo_vehiculo`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT for table `vehiculo`
 --
 ALTER TABLE `vehiculo`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `actividad`
+--
+ALTER TABLE `actividad`
+  ADD CONSTRAINT `actividad_categoria_actividad_id_foreign` FOREIGN KEY (`categoria_actividad_id`) REFERENCES `categoria_actividad` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `actividad_orden_trabajo_id_foreign` FOREIGN KEY (`orden_trabajo_id`) REFERENCES `orden_trabajo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `item_y_servicios`
+--
+ALTER TABLE `item_y_servicios`
+  ADD CONSTRAINT `item_y_servicios_actividad_id_foreign` FOREIGN KEY (`actividad_id`) REFERENCES `actividad` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `item_y_servicios_orden_trabajo_id_foreign` FOREIGN KEY (`orden_trabajo_id`) REFERENCES `orden_trabajo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `modelo_vehiculo`
@@ -4970,22 +4991,11 @@ ALTER TABLE `modelo_vehiculo`
   ADD CONSTRAINT `modelo_vehiculo_marca_vehiculo_id_foreign` FOREIGN KEY (`marca_vehiculo_id`) REFERENCES `marca_vehiculo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `model_has_permissions`
---
-ALTER TABLE `model_has_permissions`
-  ADD CONSTRAINT `model_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `model_has_roles`
---
-ALTER TABLE `model_has_roles`
-  ADD CONSTRAINT `model_has_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
-
---
 -- Constraints for table `orden_trabajo`
 --
 ALTER TABLE `orden_trabajo`
-  ADD CONSTRAINT `orden_trabajo_servicio_id_foreign` FOREIGN KEY (`servicio_id`) REFERENCES `servicio` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `orden_trabajo_estado_orden_trabajo_id_foreign` FOREIGN KEY (`estado_orden_trabajo_id`) REFERENCES `estado_orden_trabajo` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `orden_trabajo_servicio_id_foreign` FOREIGN KEY (`servicio_id`) REFERENCES `servicio` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `provincia`
@@ -4994,20 +5004,13 @@ ALTER TABLE `provincia`
   ADD CONSTRAINT `provincia_region_id_foreign` FOREIGN KEY (`region_id`) REFERENCES `region` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `role_has_permissions`
---
-ALTER TABLE `role_has_permissions`
-  ADD CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `role_has_permissions_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
-
---
 -- Constraints for table `servicio`
 --
 ALTER TABLE `servicio`
-  ADD CONSTRAINT `servicio_estado_servicio_id_foreign` FOREIGN KEY (`estado_servicio_id`) REFERENCES `estado_servicio` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `servicio_estado_servicio_id_foreign` FOREIGN KEY (`estado_servicio_id`) REFERENCES `estado_servicio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `servicio_taller_id_foreign` FOREIGN KEY (`taller_id`) REFERENCES `taller` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `servicio_tipo_servicio_id_foreign` FOREIGN KEY (`tipo_servicio_id`) REFERENCES `tipo_servicio` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  ADD CONSTRAINT `servicio_users_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `servicio_tipo_servicio_id_foreign` FOREIGN KEY (`tipo_servicio_id`) REFERENCES `tipo_servicio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `servicio_users_id_foreign` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `servicio_vehiculo_id_foreign` FOREIGN KEY (`vehiculo_id`) REFERENCES `vehiculo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
@@ -5015,7 +5018,7 @@ ALTER TABLE `servicio`
 --
 ALTER TABLE `tipo_servicio_taller`
   ADD CONSTRAINT `tipo_servicio_taller_taller_id_foreign` FOREIGN KEY (`taller_id`) REFERENCES `taller` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `tipo_servicio_taller_tipo_servicio_id_foreign` FOREIGN KEY (`tipo_servicio_id`) REFERENCES `tipo_servicio` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `tipo_servicio_taller_tipo_servicio_id_foreign` FOREIGN KEY (`tipo_servicio_id`) REFERENCES `tipo_servicio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `users`

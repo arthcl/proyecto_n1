@@ -14,7 +14,8 @@ class VehiculoFormRequest extends FormRequest
 
     public function authorize()
     {
-        return $this->user()->isAdmin();
+        return $this->user()->isAdmin() || $this->user()->isSupervisor();
+
     }
 
     /**
@@ -27,7 +28,7 @@ class VehiculoFormRequest extends FormRequest
         return [
             'vigencia'  =>  'required',
             'users_id'  => 'required',
-            'patente'  => 'required',
+            'patente'  => 'required | unique:vehiculo',
             'marca_vehiculo_id'   => 'required',
             'modelo_vehiculo_id' => 'required',
             'ano_vehiculo'  => 'required',

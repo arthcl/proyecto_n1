@@ -117,13 +117,13 @@
 					<li class="nav-item">
 						<a href="{{ route('servicio.index') }}" class="nav-link <?=($path_actual[0] == 'servicio')?"active":"";?> ">
 						<i class="far fa-circle nav-icon"></i>
-						<p>Listado</p>
+						<p>Listado servicios</p>
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href="{{ route('servicio.create') }}" class="nav-link <?=($path_actual[0] == 'servicio')?"active":"";?>">
 						<i class="far fa-circle nav-icon"></i>
-						<p>Crear</p>
+						<p>Ingresar servicio</p>
 						</a>
 					</li>
 				</ul>							
@@ -140,13 +140,13 @@
 					<li class="nav-item">
 						<a href="{{ route('usuario.index') }}" class="nav-link <?=($path_actual[0] == 'usuario')?"active":"";?>">
 						<i class="far fa-circle nav-icon"></i>
-						<p>Listado</p>
+						<p>Listado usuarios</p>
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href="{{ route('usuario.create') }}" class="nav-link <?=($path_actual[0] == 'usuario')?"active":"";?>">
 						<i class="far fa-circle nav-icon"></i>
-						<p>Crear</p>
+						<p>Ingresar usuario</p>
 						</a>
 					</li>
 				</ul>	
@@ -165,13 +165,13 @@
 					<li class="nav-item">
 						<a href="{{ route('vehiculo.index') }}" class="nav-link <?=($path_actual[0] == 'vehiculo')?"active":"";?> ">
 						<i class="far fa-circle nav-icon"></i>
-						<p>Listado</p>
+						<p>Listado vehiculos</p>
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href="{{ route('vehiculo.create') }}" class="nav-link <?=($path_actual[0] == 'vehiculo')?"active":"";?>">
 						<i class="far fa-circle nav-icon"></i>
-						<p>Crear</p>
+						<p>Ingresar vehiculo</p>
 						</a>
 					</li>
 				</ul>
@@ -189,16 +189,42 @@
 					<li class="nav-item">
 						<a href="{{ route('taller.index') }}" class="nav-link <?=($path_actual[0] == 'taller')?"active":"";?>">
 						<i class="far fa-circle nav-icon"></i>
-						<p>Listado</p>
+						<p>Listado talleres</p>
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href="{{ route('taller.create') }}" class="nav-link <?=($path_actual[0] == 'taller')?"active":"";?>">
 						<i class="far fa-circle nav-icon"></i>
-						<p>Crear</p>
+						<p>Ingresar taller</p>
 						</a>
 					</li>
-				</ul>	
+				</ul>
+				
+				
+				
+			</li>
+
+			<li class="nav-item">
+				<!-- <a href="pages/widgets.html" class="nav-link"> -->
+				<a href="{{route('marca_modelo')}}" class="nav-link <?=($path_actual[0] == 'marca_modelo')?"active":"";?>">
+					<i class="nav-icon fas fa-warehouse"></i>
+					<!-- <i class="right fas fa-angle-left"></i> -->
+					<p>Marca / Modelo</p>
+					<i class="right fas fa-angle-left"></i>
+
+				</a>
+				<ul class="nav nav-treeview">
+					<li class="nav-item">
+						<a href="{{ route('marca_modelo') }}" class="nav-link <?=($path_actual[0] == 'marca_modelo')?"active":"";?>">
+						<i class="far fa-circle nav-icon"></i>
+						<p>Ingresar Marca/modelo</p>
+						</a>
+					</li>
+
+					
+				</ul>
+				
+				
 				
 			</li>
 

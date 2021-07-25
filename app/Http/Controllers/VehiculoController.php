@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\VehiculoFormRequest;
-use App\Servicio;
-use App\ServicioVehiculo;
 use App\User;
+use App\Servicio;
 use App\Vehiculo;
-use App\TipoVehiculo;
 use App\TipoMotor;
+use App\TipoVehiculo;
 use App\MarcaVehiculo;
 use App\ModeloVehiculo;
+use App\ServicioVehiculo;
+use Illuminate\Support\Str;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\VehiculoFormRequest;
 
 class VehiculoController extends Controller
 {
@@ -28,7 +29,6 @@ class VehiculoController extends Controller
 
     public function store(VehiculoFormRequest $request)
     {
-
         Vehiculo::create($request->validated());
         return redirect()->back()->with('status', 'el vehiculo fue creato exitosamente!');
 

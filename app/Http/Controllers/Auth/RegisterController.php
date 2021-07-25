@@ -59,7 +59,7 @@ class RegisterController extends Controller
             't_usuario'         => ['required', 'numeric'],
             't_cliente'         => ['required_if:t_usuario, 3 | numeric | digits:1 | nullable'],
             't_asociado'        => ['required_if:t_usuario, 2| digits:1 | nullable'],
-            'rut'               => ['required',' string', 'max:11', new ValidChileanRut(new ChileRut)],
+            'rut'               => ['required','unique:users',' string', 'max:11', new ValidChileanRut(new ChileRut)],
             'nombre'            => ['required', 'string', 'max:50'],
             'a_paterno'         => ['required_if:t_cliente, 2 | string|max:50|nullable'],
             'a_materno'         => ['required_if:t_cliente, 2 | string|max:50|nullable'],

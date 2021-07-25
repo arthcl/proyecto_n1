@@ -20,7 +20,7 @@
                         <h2 class="animate__animated animate__fadeInDown text-uppercase "> mantención en terreno de vehiculos menores, camiones y maquinaria</h2>
                         <p class="animate__animated animate__fadeInDown">Contamos con equipo de diagnostico de tipo electrónico, hidráulico, neumático y eléctrico para atender variados equipos en terreno. Permitiendonos identificar y reparar fallas en terreno.
                         </p>
-                        <a href="#" class="b-app">Contáctanos</a>
+                        <a href="{{ route('contact') }}" class="b-app">Contáctanos</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 order-last">
                         <h2 class="text-uppercase">plataforma de monitoreo web de servicios<h2>
                         <P class="">nuestro sistema le brindara la posibilidad de visualizar el estado de su vehículo, como tambien servicios y trabajos asociados </P>
-                        <a href="#" class="b-app">Contáctanos</a>
+                        <a href="{{ route('contact') }}" class="b-app">Contáctanos</a>
                     </div>
                     <div class="caja2 col-lg-6 col-md-6 col-sm-6 col-xs-6 order-first">
                         <img src="img/celular.png" alt="celular" class="img-responsive">
@@ -73,7 +73,7 @@
                <div class="barra animate__animated animate__fadeInLeft"></div>
                 <p><strong>EMG Ingeniería y servicios</strong>, es tu solución, somos un taller integral que nos dedicamos a entregar soluciones de reparación mecánica enfocándonos en la importancia que tienen los vehículos para nuestros clientes, ya sea en su uso particular, de trabajo o venta.</p>
                 <p>Nos preocupamos que toda solución se base en la seguridad que esta presenta en el vehiculo, asi se evita que nuestros clientes mantengan algún riesgo en su recorrido.</p>
-                <a href="qs.html" class="b-qs">Leer más</a>
+                <a href="{{ route('about') }}" class="b-qs">Leer más</a>
             </div>
             <div class="col-lg-5 col-sm-5 col-md-5 col-xs-12">
                 <img src="img/isotipo-logo.png" alt="mecanico"  class="animate__animated animate__fadeInRight img-responsive">
