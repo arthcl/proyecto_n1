@@ -90,30 +90,7 @@
 					</button>
 				</div>
 			  </form>
-{{-- 
-					
 
-				<!---Observacion Servicio -->
-				<div class="input-group mb-3">
-					<div class="input-group-prepend w-25">
-						<span class="input-group-text w-100">
-							Observación
-						</span>
-					</div>
-					<textarea class="form-control text-dark text-capitalize" name="observacion" id="observacion_servicio" cols="30" rows="3" placeholder="Ingrese observación si requiere."></textarea>
-				</div>
-
-
-				<div class="col-12 text-center">
-					<button class="btn btn-primary btn-lg mx-auto col-lg-4 offset-lg-4 ml-4 my-3" type="submit">
-						<i class="far fa-save px-2"></i>
-						Ingresar
-					</button>
-				</div>
-
-			</form>
-
-	--}}
 		</div>
 	</div>
 </div>

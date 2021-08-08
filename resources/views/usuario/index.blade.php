@@ -66,12 +66,14 @@
 								</a>
 							</td>
 						</tr>
+					
 					@empty
 							<p class="lead text-secondary">No existen registros aún</p>
 					@endforelse
 
 				</tbody>
-			</table>	
+			</table>
+			{{ $cliente->links() }}	
 		</div>
 	
 		

@@ -26,23 +26,25 @@
   </a>
  </div>
 
- <div class="col-12 mt-3 table-responsive">
+ <div class="col-12 mt-3  table-responsive">
   <h2 class="h4 text-dark">Pendientes</h2>
-  <table class="table table-hover bg-light shadow-sm table-sm table-responsive-sm text-center">
+  <table class="table table-stripped table-sm">
    <thead class="thead-dark">
     <tr>
-     <th scope="col">#</th>
-     <th class="w-25" scope="col">Cliente</th>
-     <th class="w-25" scope="col">Vehículo</th>
-     <th class="w-25" scope="col">Tipo Servicio</th>
-     <th class="w-25" scope="col">Taller</th>
+     <th scope="col">Fecha de registro</th>
+     <th scope="col">Cliente</th>
+     <th scope="col">Vehículo</th>
+     <th scope="col">Tipo Servicio</th>
+     <th scope="col">Taller</th>
      <th scope="col">Acción</th>
     </tr>
    </thead>
    <tbody>
+
+    <!-- LISTADO DE SERVICIOS PENDIENTES-->
    @forelse($servicios_pendiente as $pendiente)
     <tr>
-     <th scope="row">{{ $pendiente->id }}</th>
+     <th scope="row">{{ $pendiente->created_at->format('d-m-Y') }}</th>
      <td>{{ $pendiente->user->nombre}}</td>
      <td>{{ $pendiente->vehiculo->patente}}</td>
      <td>{{ $pendiente->tipo_servicio->descripcion }}</td>
@@ -65,21 +67,23 @@
   
  <div class="col-12 mt-3 table-responsive">
   <h2 class="h4 text-dark">Ejecución</h2>
-  <table class="table table-hover bg-light shadow-sm table-sm table-responsive-sm text-center">
+  <table class="table table-stripped bg-light shadow-sm table-sm">
    <thead class="thead-dark">
     <tr>
-     <th scope="col">#</th>
-     <th class="w-25" scope="col">Cliente</th>
-     <th class="w-25" scope="col">Vehículo</th>
-     <th class="w-25" scope="col">Tipo Servicio</th>
-     <th class="w-25" scope="col">Taller</th>
+     <th scope="col">Fecha de inicio</th>
+     <th scope="col">Cliente</th>
+     <th scope="col">Vehículo</th>
+     <th scope="col">Tipo Servicio</th>
+     <th scope="col">Taller</th>
      <th scope="col">Acción</th>
     </tr>
    </thead>
    <tbody>
+
+<!-- LISTADO DE SERVICIOS ACTIVOS-->
    @forelse($servicios_activo as $activo)
     <tr>
-     <th scope="row">{{ $activo->id }}</th>
+     <th scope="row">{{$activo->updated_at->format('d-m-Y')}}</th>      
      <td>{{ $activo->user->nombre }}</td>
      <td>{{ $activo->vehiculo->patente}}</td>
      <td>{{ $activo->tipo_servicio->descripcion }}</td>
@@ -103,16 +107,15 @@
 
  <div class="col-12 mt-3 table-responsive">
   <h2 class="h4 text-dark">Finalizados</h2>
-  <table class="table table-hover bg-light shadow-sm table-sm table-responsive-sm text-center">
+  <table class="table table-stripped bg-light shadow-sm table-sm">
    <thead class="thead-dark">
-    <tr>
 
       <!-- supervisor -->
-     <th scope="col">termino</th>
-     <th class="w-25" scope="col">Cliente</th>
-     <th class="w-25" scope="col">Vehículo</th>
-     <th class="w-25" scope="col">Tipo Servicio</th>
-     <th class="w-25" scope="col">Taller</th>
+     <th scope="col">Fecha termino</th>
+     <th scope="col">Cliente</th>
+     <th scope="col">Vehículo</th>
+     <th scope="col">Tipo Servicio</th>
+     <th scope="col">Taller</th>
      <th scope="col">Acción</th>
     </tr>
 
@@ -122,9 +125,12 @@
       -->
    </thead>
    <tbody>
+
+<!-- LISTADO DE SERVICIOS FINALIZADOS-->
+
    @forelse($servicios_finalizado as $finalizado)
     <tr>
-     <th scope="row">{{ $finalizado->id }}</th>
+     <th scope="row">{{ $finalizado->updated_at->format('d-m-Y') }}</th>
      <td>{{ $finalizado->user->nombre }}</td>
      <td>{{ $finalizado->vehiculo->patente}}</td>
      <td>{{ $finalizado->tipo_servicio->descripcion }}</td>

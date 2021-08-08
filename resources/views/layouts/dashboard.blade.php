@@ -207,7 +207,7 @@
 			<li class="nav-item">
 				<!-- <a href="pages/widgets.html" class="nav-link"> -->
 				<a href="{{route('marca_modelo')}}" class="nav-link <?=($path_actual[0] == 'marca_modelo')?"active":"";?>">
-					<i class="nav-icon fas fa-warehouse"></i>
+					<i class="nav-icon fas fa-copyright"></i>
 					<!-- <i class="right fas fa-angle-left"></i> -->
 					<p>Marca / Modelo</p>
 					<i class="right fas fa-angle-left"></i>

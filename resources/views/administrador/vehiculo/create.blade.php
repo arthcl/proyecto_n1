@@ -37,7 +37,7 @@
 
 					<select class="form-control" id="users_id" name="users_id" autocomplete="users_id">
 
-						<option value="">Seleccionar...</option>
+						<option selected disabled value="">Seleccionar...</option>
 						@foreach ($cliente as $c)
 							<option value="{{$c->id}}">{{$c->rut}} / {{$c->nombre}}</option>
 						@endforeach
@@ -64,7 +64,7 @@
 					</div>
 
 					<select class="form-control" id="marca_vehiculo" name="marca_vehiculo_id" autocomplete="marca_vehiculo_id">
-						<option value="">Seleccionar...</option>
+						<option selected disabled value="">Seleccionar...</option>
 						@foreach ($ma_vehiculo as $mav)
 							<option value="{{$mav->id}}">{{$mav->descripcion}}</option>
 						@endforeach
@@ -80,7 +80,7 @@
 					</div>
 					<!-- <input class="form-control" placeholder="modelo del auto" type="text" name="modelo" value="{{old('modelo')}}"> -->
 					<select class="form-control" id="modelo_vehiculo" name="modelo_vehiculo_id" autocomplete="modelo_vehiculo_id">
-						<option value="">Seleccionar...</option>
+						<option selected disabled value="">Seleccionar...</option>
 					</select>
 				</div>
 
@@ -102,7 +102,7 @@
 						</span>
 					</div>
 					<select class="form-control" id="tipo_vehiculo_id" name="tipo_vehiculo_id" autocomplete="tipo_vehiculo_id">
-						<option value="">Seleccionar...</option>
+						<option selected disabled value="">Seleccionar...</option>
 						@foreach ($t_vehiculo as $tv)
 							<option value="{{$tv->id}}">{{$tv->descripcion}}
 							</option>
@@ -118,7 +118,7 @@
 						</span>
 					</div>
 					<select class="form-control" id="tipo_motor_id" name="tipo_motor_id">
-						<option value="{{ old('tipo_motor_id')}}">Seleccionar...</option>
+						<option selected disabled value="{{ old('tipo_motor_id')}}">Seleccionar...</option>
 						@foreach ($t_motor as $tipom)
 							<option value="{{ old('tipo_motor', $tipom->id)}}">{{$tipom->descripcion}}
 						</option>
